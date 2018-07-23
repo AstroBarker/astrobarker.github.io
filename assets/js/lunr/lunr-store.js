@@ -1,6 +1,6 @@
 var store = [{
         "title": "MidSure Poster Presentation",
-        "excerpt":" ","categories": ["Research"],
+        "excerpt":" ","categories": ["Blog"],
         "tags": [],
-        "url": "https://astrobarker.github.io/research/midsure/",
+        "url": "https://astrobarker.github.io/blog/midsure/",
         "teaser":null}]
