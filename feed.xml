@@ -1,1 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-23T11:52:56-04:00</updated><id>http://localhost:4000/</id><title type="html">Brandon Barker</title><subtitle>An amazing website.</subtitle><author><name>Brandon Barker</name><email>bbarker5@vols.utk.edu</email></author><entry><title type="html">MidSure Poster Presentation</title><link href="http://localhost:4000/research/midsure/" rel="alternate" type="text/html" title="MidSure Poster Presentation" /><published>2018-07-22T19:59:54-04:00</published><updated>2018-07-22T19:59:54-04:00</updated><id>http://localhost:4000/research/midsure</id><content type="html" xml:base="http://localhost:4000/research/midsure/">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/barker_midsure.png&quot; alt=&quot;poster&quot; /&gt;&lt;/p&gt;</content><author><name>Brandon Barker</name><email>bbarker5@vols.utk.edu</email></author><summary type="html"></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-23T12:06:17-04:00</updated><id>http://localhost:4000/</id><title type="html">Brandon Barker</title><subtitle>An amazing website.</subtitle><author><name>Brandon Barker</name><email>bbarker5@vols.utk.edu</email></author><entry><title type="html">MidSure Poster Presentation</title><link href="http://localhost:4000/research/midsure/" rel="alternate" type="text/html" title="MidSure Poster Presentation" /><published>2018-07-22T19:59:54-04:00</published><updated>2018-07-22T19:59:54-04:00</updated><id>http://localhost:4000/research/midsure</id><content type="html" xml:base="http://localhost:4000/research/midsure/">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/barker_midsure.png&quot; alt=&quot;poster&quot; /&gt;&lt;/p&gt;</content><author><name>Brandon Barker</name><email>bbarker5@vols.utk.edu</email></author><summary type="html"></summary></entry><entry><title type="html">Midsure/index</title><link href="http://localhost:4000/astrobarker.github.io/midsure-index/" rel="alternate" type="text/html" title="Midsure/index" /><published>2018-07-22T00:00:00-04:00</published><updated>2018-07-22T00:00:00-04:00</updated><id>http://localhost:4000/astrobarker.github.io/midsure/index</id><content type="html" xml:base="http://localhost:4000/astrobarker.github.io/midsure-index/">&lt;!doctype html&gt;
+&lt;!--
+  Minimal Mistakes Jekyll Theme 4.12.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+--&gt;
+&lt;html lang=&quot;en&quot; class=&quot;no-js&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+
+&lt;!-- begin _includes/seo.html --&gt;&lt;title&gt;MidSure Poster Presentation - Brandon Barker&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;An amazing website.&quot;&gt;
+
+
+
+&lt;meta property=&quot;og:type&quot; content=&quot;article&quot;&gt;
+&lt;meta property=&quot;og:locale&quot; content=&quot;en_US&quot;&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;Brandon Barker&quot;&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;MidSure Poster Presentation&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;http://localhost:4000/_posts/2018-07-22-midsure/&quot;&gt;
+
+
+
+
+
+
+
+
+  &lt;meta property=&quot;article:published_time&quot; content=&quot;2018-07-22T19:59:54-04:00&quot;&gt;
+
+
+
+
+
+  
+
+  
+
+
+&lt;link rel=&quot;canonical&quot; href=&quot;http://localhost:4000/_posts/2018-07-22-midsure/&quot;&gt;
+
+
+
+
+
+
+
+  &lt;script type=&quot;application/ld+json&quot;&gt;
+    {
+      &quot;@context&quot;: &quot;http://schema.org&quot;,
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;name&quot;: &quot;Brandon Barker&quot;,
+      &quot;url&quot;: &quot;http://localhost:4000&quot;,
+      &quot;sameAs&quot;: null
+    }
+  &lt;/script&gt;
+
+
+
+
+
+
+
+&lt;!-- end _includes/seo.html --&gt;
+
+
+&lt;link href=&quot;/feed.xml&quot; type=&quot;application/atom+xml&quot; rel=&quot;alternate&quot; title=&quot;Brandon Barker Feed&quot;&gt;
+
+&lt;!-- http://t.co/dKP3o1e --&gt;
+&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;True&quot;&gt;
+&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+&lt;script&gt;
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+&lt;/script&gt;
+
+&lt;!-- For all browsers --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/main.css&quot;&gt;
+
+&lt;!--[if lte IE 9]&gt;
+  &lt;style&gt;
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  &lt;/style&gt;
+&lt;![endif]--&gt;
+
+
+    &lt;!-- start custom head snippets --&gt;
+
+&lt;!-- insert favicons. use https://realfavicongenerator.net/ --&gt;
+
+&lt;!-- end custom head snippets --&gt;
+
+  &lt;/head&gt;
+
+  &lt;body class=&quot;layout--default&quot;&gt;
+
+    &lt;!--[if lt IE 9]&gt;
+&lt;div class=&quot;notice--danger align-center&quot; style=&quot;margin: 0;&quot;&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=&quot;https://browsehappy.com/&quot;&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/div&gt;
+&lt;![endif]--&gt;
+
+    &lt;div class=&quot;masthead&quot;&gt;
+  &lt;div class=&quot;masthead__inner-wrap&quot;&gt;
+    &lt;div class=&quot;masthead__menu&quot;&gt;
+      &lt;nav id=&quot;site-nav&quot; class=&quot;greedy-nav&quot;&gt;
+        &lt;a class=&quot;site-title&quot; href=&quot;/&quot;&gt;Brandon Barker&lt;/a&gt;
+        &lt;ul class=&quot;visible-links&quot;&gt;
+          
+            
+            &lt;li class=&quot;masthead__menu-item&quot;&gt;
+              &lt;a href=&quot;http://localhost:4000/about/&quot; &gt;About&lt;/a&gt;
+            &lt;/li&gt;
+          
+            
+            &lt;li class=&quot;masthead__menu-item&quot;&gt;
+              &lt;a href=&quot;http://localhost:4000/outreach/&quot; &gt;Outreach&lt;/a&gt;
+            &lt;/li&gt;
+          
+            
+            &lt;li class=&quot;masthead__menu-item&quot;&gt;
+              &lt;a href=&quot;http://localhost:4000/cv/barker_cv.pdf&quot; &gt;CV&lt;/a&gt;
+            &lt;/li&gt;
+          
+            
+            &lt;li class=&quot;masthead__menu-item&quot;&gt;
+              &lt;a href=&quot;http://localhost:4000/_posts/&quot; &gt;Blog&lt;/a&gt;
+            &lt;/li&gt;
+          
+        &lt;/ul&gt;
+        
+        &lt;button class=&quot;greedy-nav__toggle hidden&quot; type=&quot;button&quot;&gt;
+          &lt;span class=&quot;visually-hidden&quot;&gt;Toggle Menu&lt;/span&gt;
+          &lt;div class=&quot;navicon&quot;&gt;&lt;/div&gt;
+        &lt;/button&gt;
+        &lt;ul class=&quot;hidden-links hidden&quot;&gt;&lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;initial-content&quot;&gt;
+      &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/barker_midsure.png&quot; alt=&quot;poster&quot; /&gt;&lt;/p&gt;
+
+    &lt;/div&gt;
+
+    
+
+    &lt;div class=&quot;page__footer&quot;&gt;
+      &lt;footer&gt;
+        &lt;!-- start custom footer snippets --&gt;
+
+&lt;!-- end custom footer snippets --&gt;
+        &lt;div class=&quot;page__footer-follow&quot;&gt;
+  &lt;ul class=&quot;social-icons&quot;&gt;
+    
+      &lt;li&gt;&lt;strong&gt;Follow:&lt;/strong&gt;&lt;/li&gt;
+    
+    
+    
+    
+      &lt;li&gt;&lt;a href=&quot;https://github.com/AstroBarker&quot;&gt;&lt;i class=&quot;fab fa-fw fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; GitHub&lt;/a&gt;&lt;/li&gt;
+    
+    
+    
+    &lt;li&gt;&lt;a href=&quot;/feed.xml&quot;&gt;&lt;i class=&quot;fas fa-fw fa-rss-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Feed&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;page__footer-copyright&quot;&gt;&amp;copy; 2018 Brandon Barker. Powered by &lt;a href=&quot;https://jekyllrb.com&quot; rel=&quot;nofollow&quot;&gt;Jekyll&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://mademistakes.com/work/minimal-mistakes-jekyll-theme/&quot; rel=&quot;nofollow&quot;&gt;Minimal Mistakes&lt;/a&gt;.&lt;/div&gt;
+
+      &lt;/footer&gt;
+    &lt;/div&gt;
+
+    
+  &lt;script src=&quot;/assets/js/main.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://use.fontawesome.com/releases/v5.1.0/js/all.js&quot;&gt;&lt;/script&gt;
+
+
+
+
+
+
+
+
+  &lt;/body&gt;
+&lt;/html&gt;</content><author><name>Brandon Barker</name><email>bbarker5@vols.utk.edu</email></author><summary type="html"></summary></entry></feed>
