@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://astrobarker.github.io/blog/midsure/</loc>
-<lastmod>2018-07-22T19:59:54-04:00</lastmod>
-</url>
-<url>
-<loc>https://astrobarker.github.io/_posts/2018-07-22-midsure/</loc>
-</url>
-<url>
 <loc>https://astrobarker.github.io/archive/2018-07-22-welcome-to-jekyll/</loc>
 </url>
 <url>
@@ -17,6 +10,9 @@
 <loc>https://astrobarker.github.io/about/</loc>
 </url>
 <url>
+<loc>https://astrobarker.github.io/pres/midsure</loc>
+</url>
+<url>
 <loc>https://astrobarker.github.io/contact/</loc>
 </url>
 <url>
@@ -24,6 +20,9 @@
 </url>
 <url>
 <loc>https://astrobarker.github.io/outreach/</loc>
+</url>
+<url>
+<loc>https://astrobarker.github.io/Presentations/</loc>
 </url>
 <url>
 <loc>https://astrobarker.github.io/cv/barker_cv.pdf</loc>
