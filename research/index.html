@@ -9,14 +9,14 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Research - Brandon Barker</title>
+<!-- begin _includes/seo.html --><title>            Research - Brandon Barker      Stellar and Nuclear Astrophysicist      </title>
 <meta name="description" content="Personal webpage for Brandon Barker.">
 
 
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Brandon Barker">
+<meta property="og:site_name" content="Brandon Barker | Stellar and Nuclear Astrophysicist">
 <meta property="og:title" content="Research">
 <meta property="og:url" content="https://astrobarker.github.io/research/">
 
@@ -75,7 +75,7 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Brandon Barker Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Brandon Barker | Stellar and Nuclear Astrophysicist Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -123,7 +123,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="/">Brandon Barker</a>
+        <a class="site-title" href="/">Brandon Barker | Stellar and Nuclear Astrophysicist</a>
         <ul class="visible-links">
           
             
@@ -195,7 +195,7 @@
     
     
       <p class="author__bio" itemprop="description">
-         (Soon-to-be) Astronomy and Astrophysics Ph.D. student at Michigan State University. My interests include stellar and nuclear astrophysics, high-performance computing, and science communication.
+         (Soon-to-be) Astronomy and Astrophysics Ph.D. student at Michigan State University.
       </p>
     
   </div>
@@ -316,20 +316,51 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>I am interested in the role of nuclear physics in core-collapse supernovae.</p>
+        <p>I am interested in the role of nuclear physics in core-collapse supernovae (CCSNe) and
+algorithm development for CCSNe and related problems.</p>
+
+<h3 id="equation-of-state-dependence-of-core-collapse-supernova-observables">Equation of State Dependence of Core-Collapse Supernova Observables</h3>
+<hr />
+<p>The outcomes of CCSN simulations can depend sensitively on the equation of state (EOS).
+Therefore, a quantitative understanding of how different EOS tables affect the
+outcome of core collapse is crucial to our ability to make predictions.
+1D CCSN simulations are ideal tools for understanding this sensitivity, as we
+can run thousands of 1D simulations to truly explore the parameter space in a
+meaningful way. Using a new model for creating physical explosions in 1D,
+we explore the sensitivity of
+CCSNe to variations in input nuclear physics.
+We have tested the sensitivities of the observable signals to the nuclear
+equation of state and explored correlations of the signals with fundamental
+nuclear physics quantities, such as the symmetry energy and effective nucleon mass.</p>
 
 <h3 id="supernova-hydrodynamics">Supernova Hydrodynamics</h3>
 <hr />
-<p>It is by now well understood that hydrodynamics plays a crucial role in core-collapse
-supernovae (CCSNe). Turbulence, convection, and hydrodynamic instabilities all
+<p>It is by now well understood that hydrodynamics plays a crucial role in
+CCSNe. Turbulence, convection, and hydrodynamic instabilities all
 play pivotal roles in driving the explosion. It is important, then, that
 the governing hydrodynamic equations are solved accurately and efficiently.
 The toolkit for high-order
 neutrino-radiation hydrodynamics (<em>thornado</em>) is being developed
-for CCSNe simulations and related problems utilizing a spatial
+for CCSN simulations and related problems utilizing a spatial
 discretization based on the discontinuous Galerkin (DG) method. I am working to
 generalize the implementation in <em>thornado</em> to work with a tabulated nuclear
-matter equation of state (EOS).</p>
+matter equation of state (EOS). Moreover, I am implementing characteristic slope
+limiting, as this has been shown to be more effective than limiting on the
+conserved variables.</p>
+
+<!-- ### Prospects for High Energy Follow-up Studies of Gravitational Wave Transients
+---
+Many of the most violent and energetic events
+in the cosmos, in particular the merger of compact objects and core collapse 
+supernovae, are sources of gravitational waves and are also believed to be
+connected with Gamma Ray Bursts. Joint observations of electromagnetic and
+gravitational wave signals will provide an ideal opportunity to study the
+physics of these transient events and their progenitors. In particular,
+gamma ray observatories such as Fermi, coupled with precise sky localization,
+will be crucial to observe the high energy electromagnetic counterparts to
+gravitational wave signals. We constructed joint binary neutron star and
+gamma ray burst detection rate estimates using an analysis pipeline and
+report on the results of this analysis. -->
 
         
       </section>
