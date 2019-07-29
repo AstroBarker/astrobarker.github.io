@@ -2,6 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 make.sh
+serve.sh
 minimal-mistakes-jekyll.gemspec
 package.json
 Rakefile
