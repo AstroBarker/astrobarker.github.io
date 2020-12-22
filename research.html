@@ -54,13 +54,51 @@
 
 									<h3>Constraining the Core Structure of Turbulence-aided Neutrino-driven Core-collapse Supernovae</h3>
 										<p>Observations of core-collapse supernovae (CCSNe) reveal a wealth of information about the dynamics of the supernova ejecta and composition, 
-											for example, but tell little of the progenitor star without invoking a theoretical model. Until recently, one dimensional (1D) theoretical 
-											CCSN models did not include a robust treatment of the core physics. We use a new model for driving turbulence-aided neutrino-driven core-collapse 
-											supernovae in 1D which contains a high fidelity treatment of the neutrino and proto-neutron star physics while also accounting for turbulent and 
-											convective energy. With this, we correlate observable properties of the light curves obtained from our model such as plateau luminosity and 
-											photospheric velocity with properties of the core structure of the supernova such as the core compactness parameter. This will allow for properties 
-											of the core structure of the progenitor stars to be estimated using easily-observed quantities from the light curves. Moreover, we present a 
-											comparison of our population of type IIP supernovae to observed type IIP supernovae for which archival pre-supernovae data are available.</p>
+											for example, but tell little of the progenitor star without invoking a theoretical model. 
+											Until recently, one dimensional (1D) theoretical CCSN models did not include a robust treatment of the core physics, resorting instead to artificial thermal bomb explosions. 
+											I use a <a href="https://arxiv.org/abs/1902.01340">new model</a> for driving turbulence-aided neutrino-driven core-collapse 
+											supernovae in 1D which contains a high fidelity treatment of the neutrino physics while also accounting for turbulence and convection. 
+											Moreover, our light curve features agree very well to a population of observed type IIP supernovae.
+											With this, I can begin to connect explosion and progenitor properties for a <em>realistic</em> populator of CCSNe to apply to populations of observed CCSNe.
+											This is especially relevant as LSST and other next generation surveys prepare to collect unprecedented amount of data.
+											</p>
+
+											<p>Stay tuned for the first paper, coming soon to a journal near you!</p>
+									<hr />
+
+
+										
+									<h3>Supernova Hydrodynamics</h3>
+
+										<p>As we move into the era of exascale computing, we need modern supernova codes that can take full advantage of these architectures.
+											I am a developer for the toolkit for high-orderneutrino-radiation hydrodynamics (<a href="https://github.com/endeve/thornado"><em>thornado</em></a>), 
+											a new supernova radiation hydrodynamics code employing new-to-the-field numerical methods.
+											We use a spatial discretization based on the discontinuous Galerkin (DG) method which has many perks including parallel scalability with no added communication costs.
+										</p>
+										<p>		Most of my work has been on the hydrodynamics.
+												It is by now well understood that hydrodynamics plays a crucial role in
+												CCSNe. Turbulence, convection, and other hydrodynamic instabilities all
+												play pivotal roles in driving the explosion. It is important, then, that
+												the governing hydrodynamic equations are solved accurately and efficiently.
+												My work has been in adapting the solverfs to accomodate a tabulated nuclear matter equation of state (EoS).
+												My <a href ="https://trace.tennessee.edu/utk_chanhonoproj/2292/">undergraduate thesis</a> focused on implementing characteristic slope limiting, as this has been shown to be more effective than limiting on the
+												conserved variables.
+										</p>
+												
+												<p>An initial <a href="https://arxiv.org/abs/2011.04680"> hydrodynamics methods paper -- complete with a nuclear EoS --</a> 
+												has been published, more work is in progress, so stay tuned!</p>
+												<!-- <a></a><img src="images/jet_D.png" style="text-align:center;width:1000px" title="Density profile for 2D Riemann probelm with standard limiting (left) and characteristic limiting (right)."></a> -->
+
+												<p style="text-align:center;" title="Density profile for 2D Riemann probelm with standard limiting (left) and characteristic limiting (right)."><img src="images/jet_D.png" style="text-align:center;width:1000px" title="Density profile for 2D Riemann probelm with standard limiting (left) and characteristic limiting (right)."></p>
+												<!-- <section>
+													<div class="box alt">
+														<div class="row gtr-50 gtr-uniform">
+															<div class="image"><img src="images/jet_D.png" style="text-align:center;width:1000px" alt="density profile plot" /></div><div class="content"></div>	
+															
+													</div>
+												</section> -->
+												
+
 									<hr />
 									
 
@@ -89,26 +127,7 @@
 												for updates!</p>	
 	
 									<hr />
-	
-									<h3>Supernova Hydrodynamics</h3>
 
-										<p>It is by now well understood that hydrodynamics plays a crucial role in
-												CCSNe. Turbulence, convection, and other hydrodynamic instabilities all
-												play pivotal roles in driving the explosion. It is important, then, that
-												the governing hydrodynamic equations are solved accurately and efficiently.
-												I am assisting in the development of a new hydrodynamics code -- the toolkit for high-order
-												neutrino-radiation hydrodynamics (<a href="https://github.com/endeve/thornado"><em>thornado</em></a>) -- 
-												for CCSN simulations and related problems utilizing a spatial
-												discretization based on the discontinuous Galerkin (DG) method. My interests are in 
-												adapting the implementation in <em>thornado</em> to work with a tabulated nuclear
-												matter equation of state (EoS). Moreover, I have implemented characteristic slope
-												limiting (with a tabulated EoS), as this has been shown to be more effective than limiting on the
-												conserved variables.</p>
-												
-												<p>An initial <a href="https://iopscience.iop.org/article/10.1088/1742-6596/1225/1/012014">methods paper</a> 
-												has been published, and more work on the nuclear EoS is in progress, so stay tuned!</p>	
-
-									<hr />
 
 									<h3>Prospects for High Energy Follow-up Studies of Gravitational Wave Transients</h3>
 										<p>Many of the most violent and energetic events
