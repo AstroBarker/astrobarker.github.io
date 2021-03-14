@@ -53,35 +53,53 @@
 								<div class="inner">
 	
 
-									<h3>Constraining the Core Structure of Turbulence-aided Neutrino-driven Core-collapse Supernovae</h3>
+									<h3>Constraining the Core Structure of Type IIP Core-collapse Supernovae</h3>
 										<p>Observations of core-collapse supernovae (CCSNe) reveal a wealth of information about the dynamics of the supernova ejecta and composition, 
 											for example, but tell little of the progenitor star without invoking a theoretical model. 
 											Until recently, one dimensional (1D) theoretical CCSN models did not include a robust treatment of the core physics, resorting instead to artificial thermal bomb explosions. 
+											These simplified methods inputting an arbitrary explosion energy into a progenitor to induce an explosion.
 											I use a <a href="https://arxiv.org/abs/1902.01340">new model</a> for driving turbulence-aided neutrino-driven core-collapse 
-											supernovae in 1D which contains a high fidelity treatment of the neutrino physics while also accounting for turbulence and convection. 
+											supernovae in 1D which contains a high fidelity treatment of the neutrino physics while also accounting for turbulence and convection which can reproduce properties of 3D simulations. 
 											Moreover, our light curve features agree very well to a population of observed type IIP supernovae.
 											With this, I can begin to connect explosion and progenitor properties for a <em>realistic</em> populator of CCSNe to apply to populations of observed CCSNe.
-											This is especially relevant as LSST and other next generation surveys prepare to collect unprecedented amount of data.
+											This is especially exciting as LSST and other next generation surveys prepare to collect unprecedented amount of data.
+											</p>
+											<p>
+												The use of realistic explosion models is important for understanding observables and connecting back to the progenitor star.
+												It is becoming clear that explosion properties inferred from light curves are not unique (e.g., <a href="https://arxiv.org/abs/1903.09114")>Goldberg 2019</a>) -- many progenitor and explosion 
+												energy combinations can reproduce a light curve. Using a realistic explosion model -- where the explosion energy is determined naturally by properties of the progenitor 
+												and neutrino physics -- could help to reduce this problem by excluding progenitor - explosion energy combinations that can not be acheived by more physical models.
 											</p>
 
-											<p>Stay tuned for the first paper, coming soon to a journal near you!</p>
+											<p>
+												An inital <a href="https://arxiv.org/abs/2102.01118">paper</a> has been submitted where we explore this method for a suite of over 100 progenitors.
+												We find excellent bulk agreement with observations of other Type IIP supernovae, noteable differences in estimated progenitor properties when trying to 
+												infer properties from observed light curves, and a <b>strong, linear relationship between plateau luminosity and iron core mass</b>.
+											</p>
 									<hr />
 
 
 										
-									<h3>Next Generation Simulation Codes</h3>
+									<h3>Next Generation High-Order Simulation Codes</h3>
 
 										<p>As we move into the era of exascale computing, we need modern supernova codes that can take full advantage of these architectures.
 											I am a developer for the toolkit for high-orderneutrino-radiation hydrodynamics (<a href="https://github.com/endeve/thornado"><em>thornado</em></a>), 
-											a new supernova radiation hydrodynamics code employing new-to-the-field numerical methods.
-											We use a spatial discretization based on the discontinuous Galerkin (DG) method which has many perks including parallel scalability with no added communication costs.
+											a new supernova radiation hydrodynamics code employing high order numerical methods.
+											We use a phase-space discretization based on the discontinuous Galerkin (DG) method.
+										</p>
+										<p>
+											Discontinuous Galerkin methods are a very promising method for simulating astrophysical phenomena.
+											They can be though of as the high-order extension of finite volume methods -- evolving a high order approximation of the solution on each cell instead of cell averages -- avoiding the need for complicated reconstruction steps.
+											As a result, the computational stencil is independent of the order of accuracy -- only nearest neighbor communication is needed, making them especially parallelizable.
+											They naturally conserve angular momentum in smooth flows, and are generally conservative in the same sense as finite volume methods.
+
 										</p>
 										<p>		Most of my work has been on the hydrodynamics.
 												It is by now well understood that hydrodynamics plays a crucial role in
 												CCSNe. Turbulence, convection, and other hydrodynamic instabilities all
 												play pivotal roles in driving the explosion. It is important, then, that
 												the governing hydrodynamic equations are solved accurately and efficiently.
-												My work has been in adapting the solverfs to accomodate a tabulated nuclear matter equation of state (EoS).
+												My work has been in adapting the solvers to accomodate a tabulated nuclear matter equation of state (EoS).
 												My <a href ="https://trace.tennessee.edu/utk_chanhonoproj/2292/">undergraduate thesis</a> focused on implementing characteristic slope limiting, as this has been shown to be more effective than limiting on the
 												conserved variables.
 										</p>
