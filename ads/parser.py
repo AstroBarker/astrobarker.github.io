@@ -6,6 +6,8 @@ to write a webpage listing of papers.
 
 It optionally supports a list of ADS URLs, and will fetch the bibtex
 for each paper.
+
+-- shamelessly stolen from Mike Zingale
 """
 
 from __future__ import print_function

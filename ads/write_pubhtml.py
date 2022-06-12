@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+"""
+-- shamelessly stolen from Mike Zingale
+"""
 
 import parser
 
