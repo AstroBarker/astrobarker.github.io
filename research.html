@@ -54,7 +54,7 @@
 								<div class="inner">
 	
 
-									<h3>Constraining the Core Structure of Type IIP Core-collapse Supernovae</h3>
+									<h3>Using Realistic Explosion Models To Interpret Core-collapse Supernovae Obervations</h3>
 										<p>Observations of core-collapse supernovae (CCSNe) reveal a wealth of information about the dynamics of the supernova ejecta and composition, 
 											for example, but tell little of the progenitor star without invoking a theoretical model. 
 											Until recently, one dimensional (1D) theoretical CCSN models did not include a robust treatment of the core physics, resorting instead to artificial thermal bomb explosions. 
@@ -77,32 +77,45 @@
 												We find excellent bulk agreement with observations of other Type IIP supernovae, noteable differences in estimated progenitor properties when trying to 
 												infer properties from observed light curves, and a <b>strong, linear relationship between plateau luminosity and iron core mass</b>.
 											</p>
+
+											<p>
+											  Following up on this, we used this result with <b>real observations</b> to infer iron core masses for a population of SNe.
+												In this <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...944L...2B/abstract">paper</a> we apply Bayesian inference methods to connect the inferred iron core mass distribution to ZAMS mass properties, finding evidence of very high red supergiant progenitors.
+											</p>
+												<p style="text-align:center;"><img src="images/barker2023.png" style="text-align:center;"width=100% title="Inferred posteriors for minimum and maximum SN progenitor masses."></p>
 									<hr />
 
 
 										
 									<h3>Next Generation High-Order Simulation Codes</h3>
 
-										<p>As we move into the era of exascale computing, we need modern supernova codes that can take full advantage of these architectures.
-											I am a developer for the toolkit for high-order neutrino-radiation hydrodynamics (<a href="https://github.com/endeve/thornado"><em>thornado</em></a>), 
-											a new supernova radiation hydrodynamics code employing high order numerical methods.
-											We use a phase-space discretization based on the discontinuous Galerkin (DG) method.
+										<p>
+										  As we move into the era of exascale computing, we need modern simulation codes that can take full advantage of these architectures.
+										  
+                      I am a developer for the open source general relativistic radiation magnetohydrodynamics software <a href="https://github.com/lanl/phoebus"><em>phoebus</em></a> and
+											a past developer for the toolkit for high-order neutrino-radiation hydrodynamics (<a href="https://github.com/endeve/thornado"><em>thornado</em></a>). 
 										</p>
 										<p>
+										  <em>phoebus</em> is developed to tackle a range of problems in relativistic astrophysics, with emphasis on core-collapse supernovae, neutron star mergers, and black hole accretion.
+											It is developed from the ground using a GPU-first development strategy.
+											To facilitate <b>porformance portability</b>, <em>phoebus</em> is built on <a href="https://github.com/kokkos/kokkos">Kokkos</a>, a parallelization abstraction layer that allows <em>phoebus</em> to run on any GPU or CPU architecture by simply changing compile time options.
+											A software methods paper is in progress and the first production runs are just around the corner!
+										</p>
+										<p>
+										  <em>thornado</em> is a GPU capable code utilizing a discontinuous Galerkin phase-space discretization.
 											Discontinuous Galerkin methods are a very promising method for simulating astrophysical phenomena.
 											They can be though of as the high-order extension of finite volume methods -- evolving a high order approximation of the solution on each cell instead of cell averages -- avoiding the need for complicated reconstruction steps.
 											As a result, the computational stencil is independent of the order of accuracy -- only nearest neighbor communication is needed, making them especially parallelizable.
 											They naturally conserve angular momentum in smooth flows, and are generally conservative in the same sense as finite volume methods.
 
-										</p>
-										<p>		Most of my work has been on the hydrodynamics.
-												It is by now well understood that hydrodynamics plays a crucial role in
-												CCSNe. Turbulence, convection, and other hydrodynamic instabilities all
-												play pivotal roles in driving the explosion. It is important, then, that
-												the governing hydrodynamic equations are solved accurately and efficiently.
-												My work has been in adapting the solvers to accomodate a tabulated nuclear matter equation of state (EoS).
-												My <a href ="https://trace.tennessee.edu/utk_chanhonoproj/2292/">undergraduate thesis</a> focused on implementing characteristic slope limiting, as this has been shown to be more effective than limiting on the
-												conserved variables.
+											Most of my work has been on the hydrodynamics.
+											It is by now well understood that hydrodynamics plays a crucial role in
+											CCSNe. Turbulence, convection, and other hydrodynamic instabilities all
+											play pivotal roles in driving the explosion. It is important, then, that
+											the governing hydrodynamic equations are solved accurately and efficiently.
+											My work has been in adapting the solvers to accomodate a tabulated nuclear matter equation of state (EoS).
+											My <a href ="https://trace.tennessee.edu/utk_chanhonoproj/2292/">undergraduate thesis</a> focused on implementing characteristic slope limiting, as this has been shown to be more effective than limiting on the
+											conserved variables.
 										</p>
 												
 												<p>An initial <a href="https://arxiv.org/abs/2011.04680"> hydrodynamics methods paper -- complete with a nuclear EoS --</a> 
