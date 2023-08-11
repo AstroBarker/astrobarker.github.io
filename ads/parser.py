@@ -156,6 +156,8 @@ def translate_journal(j):
         return "ApJ"
     elif jn.lower() == r"\apjs":
         return "ApJS"
+    elif jn.lower() == r"\apjl":
+        return "ApJL"
     elif jn.lower() == r"\mnras":
         return "MNRAS"
 
