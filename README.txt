@@ -1,5 +1,7 @@
 ## My personal website! I used a theme from HTML5Up (below).
 
+Formatted with [tidy](www.html-tidy.org)
+
 Spectral by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
