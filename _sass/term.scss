@@ -1,0 +1,272 @@
+@import "fonts.scss";
+
+.term {
+    color: black;
+    font-family: $font-family-code;
+
+    table {
+        white-space: nowrap;
+        border: none;
+        table-layout: fixed;
+        padding: 0;
+        margin: 0;
+        background: $background;
+    }
+
+    td {
+        padding: 0;
+        padding-right: 1ch;
+        max-width: $max-width;
+        vertical-align: text-top;
+
+        &.date {
+            white-space: nowrap;
+        }
+
+        &.size {
+            // padding-left: 1ch;
+            text-align: right;
+        }
+
+        &.num {
+            // padding-left: 1ch;
+            text-align: right;
+        }
+    }
+
+    @media only screen and (min-width: $breakpoint-wide) {
+        td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .ls-la {
+        color: $gray;
+
+        &.author, &.date {
+            color: $body-text-color;
+        }
+    }
+
+    tr {
+        border: none;
+        background: $background;
+    }
+
+
+    // grid for stuff like fake "ls" commands
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 9em);
+        // grid-gap: 2rem;
+        // padding-left: 1rem;
+    }
+
+    // grid for stuff like fake "ls" commands
+    &-grid-single {
+        display: grid;
+        // grid-gap: 2rem;
+        // padding-left: 1rem;
+    }
+
+    a {
+        color: $body-text-color;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-wide) {
+
+    /* stuff that should just disappear on small screens */
+    .mobile-hidden {
+      visibility: collapse;
+      display: none;
+    }
+    /* stuff that should be blanked but keep layout */
+    .mobile-blank {
+        visibility: hidden;
+    }
+}
+
+footer.term {
+    margin-top: $lh;
+}
+
+a {
+    font-family: $font-family-code;
+
+    // fake "directories" - printed with a slash after
+    &.dir {
+        color: $dir-color;
+        border-bottom: none;
+
+        &:after {
+            content: "/";
+            color: $body-text-color;
+            border-bottom: none;
+
+        }
+
+        &:hover {
+            background-color: $dir-color;
+            color: $background;
+
+            &::after {
+                border-bottom: none;
+                color: $background;
+            }
+        }
+    }
+
+    // fake "files"
+    &.file {
+        color: $file-color;
+        &:hover {
+            background-color: $file-color;
+            color: $background;
+        }
+    }
+
+    // fake "symlinks"
+    &.symlink {
+        color: $symlink-color;
+
+        @media only screen and (min-width: $breakpoint-wide) {
+            &:after {
+                content: " -> " attr(href);
+                color: $gray;
+                overflow: hidden;
+            }
+        }
+
+        &:hover {
+            background-color: $symlink-color;
+            color: $background;
+
+            &::after {
+                color: $background;
+            }
+        }
+    }
+}
+
+// ul .term {
+//     list-style-type: none;
+//     padding: 4rem;
+//     margin: none;
+// }
+
+.prompt {
+    &.host {
+        &:after {
+            color: $gray;
+            content: " :: ";
+        }
+    }
+
+    &.path {
+        &:after {
+            color: $gray;
+            content: " $ ";
+        }
+        a {
+            color: $dir-color;
+            border-bottom: none;
+
+            &.dir:before {
+                content: "/";
+                color: $body-text-color;
+                border-bottom: none;
+            }
+            &.dir:after {
+                content: none;
+
+            }
+
+            &:hover {
+                background-color: $dir-color;
+                color: $background;
+
+                &.dir::before {
+                    border-bottom: none;
+                    color: $body-text-color;
+                    background-color: $background;
+                }
+            }
+        }
+    }
+
+    &.cmd {
+        font-weight: bold;
+    }
+}
+
+.blinking-cursor {
+    color: black;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-moz-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-webkit-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-ms-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-o-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}

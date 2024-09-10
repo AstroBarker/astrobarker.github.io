@@ -1,0 +1,31 @@
+---
+layout: common
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post">
+    <h1 class="post-title"itemprop="name headline">
+      {{ page.title }}
+    </h1>
+    {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{%endif %}
+    <span class = "post-date">
+        {{ page.date | date_to_string | upcase }}
+    </span>
+  </header>
+
+  <main class="content post" itemprop="articleBody">
+    <!-- begin content -->
+    {{ content }}
+    <!-- end content -->
+  </main>
+  <hr />
+  <footer class="post">
+    <p>
+      <a href="/colophon">
+        &copy; {{ site.time| date: "%Y" }} {{ page.author }}
+      </a> /
+      <a href = "/notes">More posts</a> /
+      <a href="/">Return to index</a>.
+    </p>
+  </footer>
+</article>

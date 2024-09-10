@@ -1,0 +1,13 @@
+---
+layout: common
+---
+<header class="term">
+  {% include term-nav.html %}
+  {% include term-prompt.html pwd=page.pwd cmd=page.cmd %}
+</header>
+<main class="content">
+  <!-- begin content -->
+  {{ content }}
+  <!-- end content -->
+</main>
+{% include term-footer.html %}

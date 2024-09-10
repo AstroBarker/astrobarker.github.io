@@ -1,0 +1,339 @@
+/**
+ * code by https://github.com/mrcoles/markdown-css
+ * with some modifications
+ */
+@import "vars.scss";
+
+.md {
+    word-wrap: break-word;
+}
+
+.md,
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6,
+.md code,
+.md blockquote,
+.md em,
+.md strong,
+.md code {
+    font-size: $font-size-base;
+    font-style: normal;
+    font-family: $font-family-code;
+}
+
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6,
+.md code,
+.md blockquote,
+.md ol,
+.md ul,
+.md dl,
+.md li,
+.md p,
+.md section,
+.md header,
+.md footer {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+.md h1,
+.md p,
+.md ul,
+.md dl,
+.md ol,
+.md blockquote {
+    margin-top: $lh;
+    margin-bottom: $lh;
+}
+
+.md h1 {
+    position: relative;
+    display: inline-block;
+    display: table-cell;
+    padding: $lh 0 (2 * $lh);
+    margin: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.md h1:after {
+    content: "====================================================================================================";
+    position: absolute;
+    bottom: 0.8 * $lh;
+    left: 0;
+}
+
+.md h1+* {
+    margin-top: 0;
+}
+
+.md h2 {
+    text-transform: uppercase;
+}
+
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
+    position: relative;
+    margin-bottom: $lh;
+
+    >a {
+
+        &:before {
+            @media screen and (min-width: $breakpoint-wide) {
+                position: absolute;
+                transform: translateX(-100%);
+                padding-right: 0.6rem;
+            }
+
+            color: $gray;
+            border-bottom: none;
+        }
+
+        &:hover::before {
+            color: $background;
+            background-color: $link-color;
+            border-bottom: none;
+        }
+    }
+}
+
+.md h1,
+.md h2 {
+    line-height: $lh;
+    font-weight: bold;
+}
+
+.md h2>a:before {
+    content: "##";
+}
+
+.md h3>a:before {
+    content: "###";
+}
+
+.md h4>a:before {
+    content: "####";
+}
+
+.md h5>a:before {
+    content: "#####";
+}
+
+.md h6>a:before {
+    content: "######";
+}
+
+.md li {
+    position: relative;
+    display: block;
+    padding-left: 2ch;
+}
+
+.md li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.md ul>li:before {
+    content: "*";
+    color: $light-gray;
+}
+
+.md ol {
+    counter-reset: ol;
+    &>li:before {
+        content: counter(ol) ".";
+        counter-increment: ol;
+        color: $gray;
+    }
+}
+
+
+.md blockquote {
+    position: relative;
+    padding-left: 2ch;
+    overflow: hidden;
+    color: $gray;
+}
+
+.md blockquote:after {
+    content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
+    white-space: pre;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: $lh;
+    color: $light-gray;
+}
+
+.md em {
+    font-style: italic;
+
+    &:before,
+    &:after {
+        content: "*";
+        display: inline;
+    }
+}
+
+.md strong {
+    font-weight: bold;
+}
+
+.md pre code:before,
+.md pre code:after {
+    content: '';
+}
+
+.md code {
+    color: $gray;
+    // font-weight: bold;
+}
+
+.md a code {
+    color: $link-color;
+}
+
+.md a code:hover {
+    color: $background;
+    background-color: $link-color;
+}
+
+.md code:before,
+.md code:after {
+    content: "`";
+    display: inline;
+}
+
+.md hr {
+    position: relative;
+    height: $lh;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border: 0;
+    margin-bottom: $lh;
+}
+
+.md hr:after {
+    content: "* * *";
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    line-height: $lh;
+    width: 100%;
+    word-wrap: break-word;
+    color: $light-gray;
+}
+
+// .md footer:before {
+//     content: "* * *";
+//     text-align: center;
+//     display: inline-block;
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     font-size: 1rem;
+//     line-height: $lh;
+//     width: 100%;
+//     word-wrap: break-word;
+//     color: $light-gray;
+// }
+
+@-moz-document url-prefix() {
+    .md h1 {
+        display: block;
+    }
+}
+
+.md-ones ol>li:after {
+    content: "1.";
+}
+
+/*
+ * markdown-ier footnotes
+ */
+
+ // footnote links in body text
+$footnote-color: $file-color;
+.md a.footnote {
+    &:before {
+        content: "[^";
+        color: $footnote-color;
+    }
+    &:after {
+        content: "]";
+        color: $footnote-color;
+    }
+    color: $footnote-color;
+    border-bottom: none;
+
+    &:hover {
+        background-color: $footnote-color;
+        color: $background;
+
+        &::before, &::after {
+            background-color: $footnote-color;
+            color: $background;
+        }
+    }
+}
+
+.md a.reversefootnote {
+    color: $footnote-color;
+    border-bottom: $footnote-color;
+
+    &:hover {
+        background-color: $footnote-color;
+        color: $background;
+
+        &::before, &::after {
+            background-color: $footnote-color;
+            color: $background;
+        }
+    }
+}
+
+.md div.footnotes {
+    &::before {
+        content: "* * *";
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+        line-height: $lh;
+        width: 100%;
+        word-wrap: break-word;
+        color: $light-gray;
+    }
+
+    ol {
+        &>li {
+            &:before {
+                content: "[^" counter(ol) "]:";
+                counter-increment: ol;
+                color: $gray;
+            }
+            padding-left: 6ch;
+        }
+    }
+}

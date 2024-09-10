@@ -1,0 +1,63 @@
+/*
+    vars
+*/
+
+/***********************************
+ *  1. colors
+ ***********************************/
+
+// international aerospace orange
+$intl-orange: #FF8200;
+// international engineering orange
+$eng-orange: #BA160C;
+// safety yellow
+$safety-yellow: #EA6962;
+// fire engine red
+$my_blue: #007DFF;
+
+// ansi VGA term colors
+$cyan: cyan;
+$blue: blue;
+// VGA magenta
+$purple: #AA00AA;
+$green: green;
+$red: red;
+$orange: orange;
+$light-orange: yellow;
+
+// body colors
+$body-text-color: black;
+$background: white;
+$gray: hsl(0, 0%, 40%);
+$light-gray: hsl(0, 0%, 75%);
+
+// link type colors
+$link-color: $intl-orange;
+$dir-color: $intl-orange;
+$file-color: $my_blue;
+$symlink-color: $purple;
+
+.color-intl-orange {
+    color: $intl-orange;
+}
+.color-eng-orange {
+    color: $eng-orange;
+}
+.color-vga-magenta { color: $purple; }
+.color-vga-red { color: $red; }
+
+/***********************************
+ *  2. fonts
+ ***********************************/
+
+$font-size-base: 12pt;
+$font-family-code: "Berkeley Mono", monospace, serif;
+$font-family: $font-family-code;
+
+/***********************************
+ *  3. dimensions
+ ***********************************/
+
+$lh: 1.5rem; // vertical rhythm
+$max-width: 80ch;
+$breakpoint-wide: $max-width + 12ch;

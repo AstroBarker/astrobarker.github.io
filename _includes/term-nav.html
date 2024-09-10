@@ -1,0 +1,11 @@
+<!-- term-nav -->
+{% include term-prompt.html cmd='ls' %}
+<nav class="term-grid">
+    {% for nav in site.nav %}
+    <span>
+        <a class="term-nav {{nav.kind}}" href="{{ nav.href }}">{{ nav.name }}</a>
+    </span>
+    {% endfor %}
+</nav>
+<br />
+<!--/ term-nav -->

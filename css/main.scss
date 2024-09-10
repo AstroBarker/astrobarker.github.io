@@ -1,0 +1,261 @@
+---
+---
+@import "vars.scss";
+@import "fonts.scss";
+@import "markdown.scss";
+@import "term.scss";
+
+/* Default Light Mode Styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Toggle Switch Styles */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Common vars */
+
+
+* {
+  text-rendering: geometricPrecision,
+}
+
+body {
+  background-color: $background;
+  font: $font-family-code;
+  color: $body-text-color;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  & .title {
+    letter-spacing: 0.1px;
+    text-align: center;
+    outline: none;
+    border: none;
+  }
+
+  & .halftitle {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    text-align: right;
+  }
+
+  & .blog-title {
+    text-align: left;
+  }
+}
+
+
+div.picheader,
+div.textheader {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+div.halftitle {
+  height: 124px;
+  width: 430px;
+  float: right;
+  margin: auto;
+}
+
+.content p {
+  clear: both;
+  padding: 0;
+  text-align: left;
+}
+
+.content {
+  line-height: $lh;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $link-color;
+    color: $background;
+  }
+}
+
+.content a {
+    border-bottom: 1px solid $link-color;
+    // &:visited {
+    //   color: $purple;
+    //   border-bottom: 1px solid $purple;
+    //   &:hover {
+    //     background-color: $purple;
+    //     color: $background;
+    //   }
+    // }
+}
+
+
+img.titleimage {
+  float: left;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+
+div.clear {
+  clear: both;
+}
+
+div.content {
+  clear: both;
+}
+
+p.sidenote {
+  ::before {
+    content: "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
+  }
+}
+
+
+/*** site ***/
+
+.site {
+  max-width: $max-width + 2ch;
+  margin: 2ch auto;
+  padding: 1ch;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: $lh;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+
+  code {
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+
+/* Pygments via Jekyll */
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: $font-family-code !important;
+}
+
+.gist .markdown-body {
+  padding: 1rem;
+}
+
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+
+.gist .gist-file .gist-data {
+  font-size: .8rem !important;
+  line-height: $lh;
+}
+
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+.page,
+.post {
+  padding-bottom: 2rem;
+}
+
+.page-title,
+.post-title,
+.subtitle {
+  margin-top: 0;
+}
+
+.post-title,
+.subtitle {
+  &:before {
+    content: none;
+  }
+
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: $gray;
+  font-weight: 400;
+}
+
+header.post {
+  padding-bottom: 2rem;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  float: left;
+  color: $gray;
+}

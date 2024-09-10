@@ -1,0 +1,117 @@
+# Permalinks
+permalink: "/:title.html"
+
+# Setup
+title:            brandon's website
+url:              https://astrobarker.github.io
+tagline: Personal webpage for Brandon L. Barker, PhD (astrobarker).
+description: Peronal world wide webpage for Dr. Brandon L. Barker, computational astrophysicist at Los Alamos National Laboratory.
+baseurl:          /
+author: &default-author
+  name:           Brandon L. Barker
+  url:            https://astrobarker.github.io
+  email:          barker@lanl.gov
+
+encoding: utf-8
+
+exclude:
+  - "website.sublime-project"
+  - "website.sublime-workspace"
+  - "*.log"
+  - "*.fdb_latexmk"
+  - "*.synctex.gz"
+  - "*.aux"
+  - "*.nix"
+  - ".bundle"
+  - ".direnv"
+  - "vendor"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: main
+  -
+    scope:
+      path: "notes"
+      type: "posts"
+    scope:
+      path: "resources"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "brandon"
+      author: *default_author
+  -
+    scope:
+      path: "etc"
+      type: "pages"
+    values:
+      layout: main
+  -
+    scope:
+      path: "slides"
+      type: "pages"
+    values:
+      layout: main
+
+# plugins: ["jekyll-paginate"]
+plugins:
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..4
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Navigation
+nav:
+  - name:           ""
+    href:           "/"
+    kind:           "dir"
+    #  - name:           "code"
+    #    href:           "/code"
+    #    kind:           "dir"
+  - name:           "code"
+    href:           "https://github.com/astrobarker"
+    kind:           "dir"
+    #  - name:           "notes"
+    #    href:           "/notes"
+    #    kind:           "dir"
+  - name:           "resources"
+    href:           "/resources"
+    kind:           "dir"
+  - name:           "research.md"
+    href:           "research"
+    kind:           "file"
+    #  - name:           "etc"
+    #    href:           "/etc"
+    #    kind:           "dir"
+    #  - name:           "slides"
+    #    href:           "/slides"
+    #    kind:           "dir"
+  - name:           "about.md"
+    href:           "/aboutme"
+    kind:           "file"
+  - name:           "outreach.md"
+    href:           "/outreach"
+    kind:           "file"
+  - name:           "provenance.md"
+    href:           "/provenance"
+    kind:           "file"
+  - name:           "cv.pdf"
+    href:           "/blb_cv.pdf"
+    kind:           "file"
+  - name:           "json_resume"
+    href:           "https://registry.jsonresume.org/astrobarker"
+    kind:           "file"

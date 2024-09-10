@@ -1,2 +1,4 @@
 images/ccsne_bck.jpg
 __pycache__/
+_site/
+vendor/

@@ -1,0 +1,5 @@
+# list of slides to generate links to
+- title: "title"
+  date: 2023-08-14
+  symlink: https://astrobarker.github.io
+  extension: "mp3"

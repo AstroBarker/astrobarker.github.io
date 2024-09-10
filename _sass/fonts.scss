@@ -1,0 +1,37 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    font-style: normal;
+    font-weight: normal;
+    src:
+      url("/fonts/berkeley-mono/BerkeleyMono-Regular.woff") format("woff"),
+      url("/fonts/berkeley-mono/BerkeleyMono-Regular.woff2") format("woff2");
+};
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    font-style: normal;
+    font-weight: bold;
+    src:
+      url("/fonts/berkeley-mono/BerkeleyMono-Bold.woff") format("woff"),
+      url("/fonts/berkeley-mono/BerkeleyMono-Bold.woff2") format("woff2");
+};
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    font-style: italic;
+    font-weight: normal;
+    src:
+      url("/fonts/berkeley-mono/BerkeleyMono-Italic.woff") format("woff"),
+      url("/fonts/berkeley-mono/BerkeleyMono-Italic.woff2") format("woff2");
+};
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    font-style: italic;
+    font-weight: bold;
+    src:
+      url("/fonts/berkeley-mono/BerkeleyMonoBold-Italic.woff") format("woff"),
+      url("/fonts/berkeley-mono/BerkeleyMonoBold-Italic.woff2") format("woff2");
+};
