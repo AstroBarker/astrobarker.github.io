@@ -6,13 +6,17 @@ cmd: cat about.md
 
 # Brandon L. Barker, PhD
 
-Welcome to Brandon's homepage, the best stop on the information superhighway!
+Welcome to homepage of Brandon L. Barker, PhD -- the best stop on the information superhighway!
+My current state:
 
 - Metropolis Postdoctoral Fellow
 - Computational Physics and Methods
 - Center for Theoretical Astrophysics
 - Los Alamos National Laboratory
 - PhD, Astronomy and Astrophysics and Computational Mathematics, Sciences, and Engineering
+
+Here you can find out more [about me](#about-me) and my [research](#research), [resources](resources) I
+have produced, [code](#code) I have worked on, and more.
 
 * * *
 
@@ -25,32 +29,17 @@ Currently, I am a Metropolis computational physics postdoctoral fellow at Los Al
 working primarily with Jonah Miller and Matt Mumpower.
 My work now focuses of modeling collapsars to understand the impacts of neutrino transport and the
 prospects for heavy element nucleosynthesis.
+Broadly, I am interested in numerical relativity, 
+numerical methods, multi-physics problems, and the development of open-source scientific software. 
 
 Previously I was a NSF Graduate Research Fellow at Michigan State University working with Sean Couch. 
-My work involves high-fidelity modeling of core-collapse supernovae and related phenomena and the 
-implementation of high-order numerical methods. Broadly, I am interested in numerical relativity, 
-high-order numerical methods, multi-physics problems, and the development of open-source scientific software. 
+My work PhD involved high-fidelity modeling of core-collapse supernovae and connecting neutrino-driven 
+models to observations.
+ 
 
 Outside of work, I enjoy backpacking, nature photography, cooking, perfecting my coffee brew, 
 and writing less useful code.
 
-<!---
-I'm a [programmer](#code), a computer enthusiast, an occasional
-[artist](/portfolio), and a ["neural oscillator of uncertain
-significance"][oscillator], operating out of the San Francisco Exclusion Zone. I
-like writing the kind of software a lot of people don't think
-about too often these days: low-level systems software, operating systems, and
-infrastructure.
-
-Professionally, I'm [writing software](/new-years-and-new-beginnings) for [the cloud computer] at [Oxide Computer Company].
-Previously, I worked on open source networking infrastructure for cloud-native
-applications at [buoyant.io](https://buoyant.io).
-
-Outside of work, I like running, being outside, cooking, and writing [weirder, less useful software](#code).
-
-[the cloud computer]: https://oxide.computer/blog/the-cloud-computer
-[Oxide Computer Company]: https://oxide.computer/
--->
 * * *
 
 ## Research
