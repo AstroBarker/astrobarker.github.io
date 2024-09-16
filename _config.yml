@@ -46,6 +46,14 @@ defaults:
       author: *default_author
   -
     scope:
+      path: "resources1"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "brandon"
+      author: *default_author
+  -
+    scope:
       path: "etc"
       type: "pages"
     values:
