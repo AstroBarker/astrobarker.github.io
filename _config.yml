@@ -37,16 +37,13 @@ defaults:
     scope:
       path: "notes"
       type: "posts"
-    scope:
-      path: "resources"
-      type: "posts"
     values:
       layout: "post"
       author: "brandon"
       author: *default_author
   -
     scope:
-      path: "resources1"
+      path: "resources"
       type: "posts"
     values:
       layout: "post"
