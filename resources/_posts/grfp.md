@@ -1,0 +1,84 @@
+---
+layout: post
+title: "Graduate Research Fellowships"
+categories: fellowships
+author: Brandon Barker
+---
+
+> "Here at last, on the shores of the sea... comes the end of our Fellowship." - J. R. R. Tolkien
+
+* * *
+
+Graduate fellowships are competitive awards given to top students each year. 
+They are usually given to students about to enter a graduate program (either graduating undergraduates or students that took time off) 
+and students in their first two years of their graduate programs. There are many fellowships out there, 
+each having a different focus and perks. Recipients of these awards receive higher stipends, lower teaching requirements, 
+sometimes access to computational resources or technology funds, and more. [Astrobites][Astrobites] has compiled a large [list][list] of such 
+fellowships available to astronomy students. Below I share a few thoughts and resources from my experienes applying to 
+graduate fellowships. At the end of the day, these fellowships are high competitive, but even more so stochastic. 
+One application could get great marks with one set of reviewers but not with a different set. Not getting one of 
+these awards doesn't reflect on your potential as a researcher.
+
+* * *
+
+
+## [The National Science Foundation Graduate Research Fellowship][grfp]
+
+* **! Update : Aug 2024 : Some of the below information may be outdated. Mallory Ladd's resources seem to be unavailable.**
+
+The NSF GRFP is one of the largest and most prestigious fellowships of its kind, providing three years of support,
+and opportunities for funding for research travel. Students may apply for this as they are applying to graduate programs 
+(such as senior undergraduates) and once during their first **or** second year of their graduate program. 
+There is a wealth of advice out there on preparing NSF GRFP applications and I can't really do it justice. 
+The best resource for me was Mallory Ladd's site. She covers it all. Also very useful is Alex Lang's [site][lang]. 
+There's a huge list of essays here that may be helpful -- I highly encourage reading winning (and losing!) 
+essays in your field to see what did and did not work. I applied in October 2018 as a senior undergraduate 
+and was awarded the fellowship in April. My application materials and reviewer feedback can be found below. 
+You can also find a [template directory][template] with LaTeX files that comply with proposal formatting guidelines 
+(as of October 2018) courtesy of [Dr. Carl Fields][fields]. Feel free to contact me if you have any other questions!
+
+Below you can find my application materials and feedback.
+
+* [Personal Statement](nsf_grfp_personal.pdf)
+* [Research Statement](nsf_grfp_research.pdf)
+* [Feedback](nsf_feedback.pdf)
+
+* * *
+
+## [The Ford Foundation Predoctoral Fellowship][ford]
+
+* **! Update : 2024 : The Ford Foundation Preodoctoral Fellowship had its last cycle in 2023.**
+
+The FORD differs from the NSF in the emphasis that is placed on your potential as a future educator. 
+Much of the previous advice for the NSF GRFP applies here as well, though some extra thought should 
+be given in choosing your letter writers to ensure that they can properly address the criteria 
+relevant for the FORD. It's fairly straightforward to adapt an NSF proposal into a FORD proposal, 
+just make sure that you address all of the points that they outline. 
+I applied in December 2018 and received an an honorable mention in March. 
+My application materials and results are available below.
+
+* [Personal Statement](ford_personal.pdf)
+* [Previous Research Statement](ford_prevResearch.pdf)
+* [Research Statement](ford_research_plan.pdf)
+* [Feedback](ford_results.pdf)
+
+* * *
+
+## Further Reading
+
+There are a host of other fellowship options available.
+See some of the following resources:
+
+- [Michigan State University CMSE list](https://cmse.msu.edu/Academics/grad_program/fellowship.aspx): List by MSU department 
+of Computational Mathematics, Sciences, and Engineering
+- [JHU spreadsheet](https://research.jhu.edu/rdt/funding-opportunities/graduate/): Johns Hopkins curated spreadsheet
+
+* * *
+
+[grfp]: https://www.nsfgrfp.org/
+[Astrobites]: https://astrobites.org/
+[list]: https://astrobites.org/2018/04/27/list-of-major-us-fellowships-for-astronomy-students/
+[lang]: https://www.alexhunterlang.com/nsf-fellowship
+[template]: https://carlnotsagan.github.io/fellowships/nsf_grfp/template_dir.zip
+[fields]: https://carlnotsagan.github.io/
+[ford]: http://sites.nationalacademies.org/PGA/FordFellowships/PGA_171962
