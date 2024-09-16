@@ -52,6 +52,7 @@ My work lies in the theoretical study of these events using the most advanced co
 exploration of how to use modern theory to understand observations. I develop open source scientific software 
 to model the central engines of these phenomena and explore how, 
 through modern numerical methods and software design, we can improve these models.
+
 * * *
 
 ## Resources
