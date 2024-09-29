@@ -43,10 +43,16 @@ and writing less useful code.
 * * *
 
 ## Research
+As a computational physicist, my professional time is spent developing, implementing, and deploying 
+numerical methods focusing on multiscale problems in physics and astronomy. I strive to create computational 
+models that are more accurate, efficent, and portable.  
+
+In astrophysics, my interests center around nucleosynthesis sites -- especially core-collapse supernovae -- 
+to understand the origins of the periodic table.
 Core-collapse supernovae are some of the most interesting events in the universe (though I may be biased on this!). 
 They contain a wealth of fundamental physics and allow us to probe environments far grander than those accessible to 
 Terrestrial labs in order to understand how matter behaves in the most extreme environments. They are responsible 
-for the synthesis of many of the elements up to iron, and possibly beyond, and drive the evolution of galaxies. 
+for the synthesis of many of the elements and drive the evolution of galaxies. 
 Understanding these phenomena requires a partnership of observational, theoretical, and numerical efforts. 
 My work lies in the theoretical study of these events using the most advanced computers available and the 
 exploration of how to use modern theory to understand observations. I develop open source scientific software 
@@ -54,10 +60,6 @@ to model the central engines of these phenomena and explore how,
 through modern numerical methods and software design, we can improve these models.
 
 * * *
-
-## Resources
-My success, however defined, has only been possible because of the support provided to me.
-Whenever possible, I try to share my [resources](resources) for others to benefit from.
 
 ## Code
 
@@ -102,6 +104,12 @@ The software listed here is a mix of codes that I’ve used and developed. Also 
 [sordine]: https://github.com/astrobarker/sistrum
 [mplcolors]: https://github.com/astrobarker/mplcolors
 [kokkos]: https://github.com/kokkos/kokkos
+
+* * *
+
+## Resources
+My success, however defined, has only been possible because of the support provided to me.
+Whenever possible, I try to share my [resources](resources) for others to benefit from.
 
 * * *
 
