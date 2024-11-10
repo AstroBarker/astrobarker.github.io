@@ -121,7 +121,7 @@ Whenever possible, I try to share my [resources](resources) for others to benefi
 
 Throughout my career I have worked to maintain an involvement in my community. 
 This has made for some of the most enriching moments of my education. 
-Find out about the [outreach initiatives][outreach] I have been involved in!
+Find out about the [outreach initiatives](outreach) I have been involved in!
 
 * * *
 
