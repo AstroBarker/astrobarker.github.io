@@ -70,6 +70,7 @@ The software listed here is a mix of codes that I’ve used and developed. Also 
 
   `Phoebus` is a general relativistic neutrino radiation magnetohydrodynamics code built on the adaptive mesh refinement library `Parthenon`. 
   It supports a general equation of state, several radiation transport algorithms, and analytic and prescribed metrics.
+  See the [paper][phoebus-paper]!
 
 + **[Parthenon][parthenon]: Performance Portable Block-Based Adaptive Mesh Refinement**
 
@@ -80,6 +81,7 @@ The software listed here is a mix of codes that I’ve used and developed. Also 
 
   `Singularity-eos` is a performance-portable equation of state library. It leverages on-node parallelism on heterogeneous architectures. 
   At present, Singularity-eos supports over ten equations of state for both terrestrial and astrophysical applications.
+  See the [paper][singularity-eos-paper]!
 
 + **[thornado][thornado]: Discontinuous Galerkin Methods for Supernovae**
 
@@ -98,8 +100,10 @@ The software listed here is a mix of codes that I’ve used and developed. Also 
   The same utilities are available as an importable package.
 
 [phoebus]: https://github.com/lanl/phoebus
+[phoebus-paper]: https://ui.adsabs.harvard.edu/abs/2024arXiv241009146B/abstract
 [parthenon]: https://github.com/parthenon-hpc-lab/parthenon
 [singularity-eos]: https://github.com/lanl/singularity-eos
+[singularity-eos-paper]: https://doi.org/10.21105/joss.06805 
 [thornado]: https://github.com/endeve/thornado
 [sordine]: https://github.com/astrobarker/sistrum
 [mplcolors]: https://github.com/astrobarker/mplcolors
