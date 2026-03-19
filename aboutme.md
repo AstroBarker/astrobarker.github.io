@@ -17,6 +17,7 @@ in the Computational Physics and Methods group.
 My primary research interests are the explosion mechanisms of core-collapse supernovae,
 understanding which stars explode as CCSNe, the origins of the heaviest elements, and 
 the development of portable, scalable, open source scientific software. I am a lead developer of 
+[athelas][athelas], a new high-order code in development for modeling supernova light curves and 
 [phoebus][phoebus], a general relativistic radiation magnetohydrodynamic code for relativistic astrophysics.
 
 I am passionate about developing open source, community driven scientific software. 
@@ -36,7 +37,7 @@ Researcher of the Year for my exceptional academic record and research contribut
 My research contributions were further recognized by the National Science Foundation through a NSF Graduate Research Fellowship.
 
 At UTK I worked with Eirik Endeve and Anthony Mezzacappa exploring the explosion mechanism of core-collapse 
-supernovae and assisting with the development of the thornado radiation hydrodynamics code, 
+supernovae and developing thornado radiation hydrodynamics code, 
 on which my [senior thesis](https://trace.tennessee.edu/utk_chanhonoproj/2292/) was based.
 
 Outside of research, I’m passionate about equitable STEM education and science outreach. 
@@ -45,6 +46,7 @@ and assiting with various after school science programs. I also frequently engag
 public with science demonstrations. To recognize my outreach efforts, academic success, and research achievements, 
 I was awarded a Ford Foundation Predoctoral Fellowship Honorable Mention.
 
+[athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
 [thornado]: https://github.com/endeve/thornado
 [couch]: https://web.pa.msu.edu/people/couch/
