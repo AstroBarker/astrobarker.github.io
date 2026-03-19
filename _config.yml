@@ -5,7 +5,7 @@ permalink: "/:title.html"
 title:            brandon's website
 url:              https://astrobarker.github.io
 tagline: Personal webpage for Brandon L. Barker, PhD (astrobarker).
-description: Peronal world wide webpage for Dr. Brandon L. Barker, computational astrophysicist at Los Alamos National Laboratory.
+description: Personal world wide webpage for Dr. Brandon L. Barker, computational astrophysicist at Los Alamos National Laboratory.
 baseurl:          /
 author: &default-author
   name:           Brandon L. Barker
