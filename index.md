@@ -10,7 +10,8 @@ Welcome to homepage of Brandon L. Barker, PhD -- the best stop on the informatio
 My current state:
 
 - Metropolis Postdoctoral Fellow
-- Computational Physics and Methods
+- Computing and Artificial Intelligence Division
+- Computational Physics and Methods Group (CAI-2)
 - Center for Theoretical Astrophysics
 - Los Alamos National Laboratory
 - PhD, Astronomy and Astrophysics and Computational Mathematics, Sciences, and Engineering
@@ -21,14 +22,19 @@ have produced, [code](#code) I have worked on, and more.
 * * *
 
 ## About Me
-I am a computational astrophysicist focused on understanding the underlying physics 
-of massive astrophysical explosions -- core-collapse supernovae and neutron star mergers -- as
-well as the origins of the elements. I am greatly interested in the development and 
+I am a computational (astro)physicist focused on multi-physics, multi-scale 
+modeling of high energy density plasmas. As an astrophysicist my work centers
+around understanding the origins of high-energy astrophysical transients --
+primarily supernovae and kilonovae.
+I am greatly interested in the development and 
 implementation of high-order accurate numerical methods in these contexts.
-Currently, I am a Metropolis computational physics postdoctoral fellow at Los Alamos National Laboratory 
-working primarily with Jonah Miller and Matt Mumpower.
-My work now focuses of modeling collapsars to understand the impacts of neutrino transport and the
-prospects for heavy element nucleosynthesis.
+
+Currently, I am a Metropolis computational physics postdoctoral 
+fellow at Los Alamos National Laboratory in the Computational Physics 
+and Methods group.
+My work now focuses on the development of novel multiphysics algorithms to support 
+a wide range of applications from high energy astrophysics to terrestrial 
+experimental design.
 Broadly, I am interested in numerical relativity, 
 numerical methods, multi-physics problems, and the development of open-source scientific software. 
 
@@ -36,26 +42,30 @@ Previously I was a NSF Graduate Research Fellow at Michigan State University wor
 My work PhD involved high-fidelity modeling of core-collapse supernovae and connecting neutrino-driven 
 models to observations.
  
-
-Outside of work, I enjoy backpacking, nature photography, cooking, perfecting my coffee brew, 
-and writing less useful code.
+Outside of work, I enjoy backpacking, kayaking, nature photography, cooking, 
+perfecting my coffee brew, and writing less useful software.
 
 * * *
 
 ## Research
-As a computational physicist, my professional time is spent developing, implementing, and deploying 
-numerical methods focusing on multiscale problems in physics and astronomy. I strive to create computational 
+As a computational physicist, my professional time is spent developing, 
+implementing, and deploying numerical methods focusing on multiscale problems 
+in physics and astronomy. I strive to create computational 
 models that are more accurate, efficent, and portable.  
 
-In astrophysics, my interests center around nucleosynthesis sites -- especially core-collapse supernovae -- 
-to understand the origins of the periodic table.
-Core-collapse supernovae are some of the most interesting events in the universe (though I may be biased on this!). 
-They contain a wealth of fundamental physics and allow us to probe environments far grander than those accessible to 
-Terrestrial labs in order to understand how matter behaves in the most extreme environments. They are responsible 
+In astrophysics, my interests center around nucleosynthesis sites -- 
+especially core-collapse supernovae -- to understand the origins of the 
+periodic table. Core-collapse supernovae are some of the most interesting 
+events in the universe (though I may be biased on this!). 
+They contain a wealth of fundamental physics and allow us to probe environments 
+far grander than those accessible to Terrestrial labs in order to understand 
+how matter behaves in the most extreme environments. They are responsible 
 for the synthesis of many of the elements and drive the evolution of galaxies. 
-Understanding these phenomena requires a partnership of observational, theoretical, and numerical efforts. 
-My work lies in the theoretical study of these events using the most advanced computers available and the 
-exploration of how to use modern theory to understand observations. I develop open source scientific software 
+Understanding these phenomena requires a partnership of observational, 
+theoretical, and numerical efforts. My work lies in the theoretical study of 
+these events using the most advanced computers available and the 
+exploration of how to use modern theory to understand observations. 
+I develop open source scientific software 
 to model the central engines of these phenomena and explore how, 
 through modern numerical methods and software design, we can improve these models.
 
@@ -63,8 +73,20 @@ through modern numerical methods and software design, we can improve these model
 
 ## Code
 
-Software is a key piece of the scientific infrastructure. By open sourcing software, it may become a tool for the community. 
-The software listed here is a mix of codes that I’ve used and developed. Also see my [GitHub](https://github.com/astrobarker).
+Software is a key piece of the scientific infrastructure. 
+By open sourcing software, it may become a tool for the community. 
+My primary passion is the development of open-source community codes 
+to drive science forward.
+The software listed here is a sample of the codes that I have developed.
+Also see my [GitHub](https://github.com/astrobarker).
+
++ **[Athelas][athelas]: A modern transient code**
+
+  `Athelas` is an in-development radiation hydrodynamics code for simulating 
+  core-collapse supernovae and creating synthetic light curves. It is built upon 
+  conservative, high-order discontinuous Galerkin methods. It supports stellar
+  profiles from the MESA stellar evolution code and is nearing porudction 
+  capability.
 
 + **[Phoebus][phoebus]: Performance Portable GRRMHD**
 
@@ -99,6 +121,7 @@ The software listed here is a mix of codes that I’ve used and developed. Also 
   It supports displaying matplotlib colors and colorbars, as well as color complements, triads, and tetrads, in the command line. 
   The same utilities are available as an importable package.
 
+[phoebus]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
 [phoebus-paper]: https://ui.adsabs.harvard.edu/abs/2024arXiv241009146B/abstract
 [parthenon]: https://github.com/parthenon-hpc-lab/parthenon
