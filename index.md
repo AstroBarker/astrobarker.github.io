@@ -121,7 +121,7 @@ Also see my [GitHub](https://github.com/astrobarker).
   It supports displaying matplotlib colors and colorbars, as well as color complements, triads, and tetrads, in the command line. 
   The same utilities are available as an importable package.
 
-[phoebus]: https://github.com/athelas-astro/athelas
+[athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
 [phoebus-paper]: https://ui.adsabs.harvard.edu/abs/2024arXiv241009146B/abstract
 [parthenon]: https://github.com/parthenon-hpc-lab/parthenon
