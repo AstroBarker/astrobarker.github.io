@@ -51,7 +51,7 @@ perfecting my coffee brew, and writing less useful software.
 As a computational physicist, my professional time is spent developing, 
 implementing, and deploying numerical methods focusing on multiscale problems 
 in physics and astronomy. I strive to create computational 
-models that are more accurate, efficent, and portable.  
+models that are more accurate, efficient, and portable.  
 
 In astrophysics, my interests center around nucleosynthesis sites -- 
 especially core-collapse supernovae -- to understand the origins of the 
@@ -85,7 +85,7 @@ Also see my [GitHub](https://github.com/astrobarker).
   `Athelas` is an in-development radiation hydrodynamics code for simulating 
   core-collapse supernovae and creating synthetic light curves. It is built upon 
   conservative, high-order discontinuous Galerkin methods. It supports stellar
-  profiles from the MESA stellar evolution code and is nearing porudction 
+  profiles from the MESA stellar evolution code and is nearing production
   capability.
 
 + **[Phoebus][phoebus]: Performance Portable GRRMHD**
@@ -159,6 +159,6 @@ A few other corners of the Internet where you can find me include:
 
 ### Contact
 
-+ e-mail:<!--  barker (AT) lanl (DOT) gov or --> `barker (AT) lanl (DOT) gov`
++ e-mail: [barker@lanl.gov](mailto:barker@lanl.gov)
 
 * * *
