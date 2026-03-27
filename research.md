@@ -115,6 +115,7 @@ for safely moving samples between instruments.
 
 * * *
 
+[athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
 [thornado]: https://github.com/endeve/thornado
 [kokkos]: https://github.com/kokkos/kokkos
