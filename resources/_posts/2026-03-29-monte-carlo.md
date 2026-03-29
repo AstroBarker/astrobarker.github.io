@@ -46,9 +46,7 @@ $$\label{eq:cov}
 For many applications of interest, we don't have knowledge of
 the underlying distribution $P(u,v,w)$, so we must resort to
 approximations. 
-Ultimately, we seek to estimate
-Equation [\[eq:true_error\]](#eq:true_error){reference-type="ref"
-reference="eq:true_error"}.
+Ultimately, we seek to estimate $\sigma_z^2$.
 Let us begin by Taylor expanding $z$ about $\mu_z$.
 
 $$z - \mu_z \approx (u - \mu_u) (\partial_u z)\vert_{\mu_u} + (v - \mu_v) (\partial_v z)\vert_{\mu_v}
@@ -64,9 +62,8 @@ $$\begin{aligned}
 \end{split}          
 \end{aligned}$$
 
-Inserting the above into
-Equation [\[eq:true_error\]](#eq:true_error){reference-type="ref"
-reference="eq:true_error"}, we find the following expression:
+Inserting the above into the expression for $\sigma_z^2$ 
+we find the following expression:
 
 $$\begin{aligned}
 \begin{split}
@@ -83,15 +80,11 @@ $$\begin{aligned}
 Now, recalling that the derivatives about have all been evaluated at
 their respective means and are constants here, we may make use of two
 simple definitions to finish simplifying our expression. First, notice
-from Equation [\[eq:true_error\]](#eq:true_error){reference-type="ref"
-reference="eq:true_error"} that the first three terms in the above
+from the expression for $\sigma_z^2$ that the first three terms in the above
 expression are proportional to $\sigma_u^2$, $\sigma_v^2$, and
 $\sigma_w^2$ scaled by the squared partial derivatives. For the final
-three terms, we may use the expression for the covariance,
-Equation [\[eq:cov\]](#eq:cov){reference-type="ref" reference="eq:cov"},
-in the same way. Then we may simplify
-Equation [\[eq:long\]](#eq:long){reference-type="ref"
-reference="eq:long"} as follows
+three terms, we may use the expression for the covariance
+in the same way. Then we may simplify as follows
 
 $$\begin{aligned}
 \begin{split}
@@ -110,8 +103,7 @@ generalized to any number of variables.
   Using the relationship above derive the error propagation rule for multiplicative 
   error propagation.
 
-We may make a few observations about Equation 
-[\[eq:error]](#eq:error){reference-type="ref" reference = "eq:error"}.
+We may make a few observations this expression for the error.
 * First, this form for error propagation assumes Gaussianity. $z$, $u$, and $v$ are 
   all described by normal distributions. This form **cannot treat non-Gaussian 
   posteriors.** This means that asymmetric uncertainties, $x = \mu^{+a}_{-b}$, 
