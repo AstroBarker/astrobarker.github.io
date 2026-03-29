@@ -124,7 +124,7 @@ trivially -- the *Monte Carlo* method.
 The Monte Carlo method involves random sampling of the underlying distribution
 and constructing an approximation of the distribution of out quantity of interest 
 $z$. Begin by observing that if we have a measurement $u$ with variance
-$\sigma_u$ and mean $\mu_u = u$ then $u$ is expected to be normally distributed.
+$\sigma_u^2$ and mean $\mu_u = u$ then $u$ is expected to be normally distributed.
 
 The Monte Carlo procedure is then simple:
 
