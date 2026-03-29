@@ -10,13 +10,17 @@ author: Brandon Barker
 
 * * *
 
-Often we are met with the need to fit a set of data to some functional
-form -- perhaps a line, an exponential, or if we are truly desparete, a
-power law.
+There is no such thing as a perfect measurement.
+Inevitably we are met with the need to propagate measurement 
+uncertainty on to some derived quantity. Given a measurement of 
+a star's surface temperature and luminosity we may seek to 
+estimate its radius. Given measurement uncertainty on the 
+effective temperature and luminosity, how much can we trust 
+the estimated radius?
 
-In propagating the error of an uncertain fit applied to an observation
-with measurement error, we are faced with estimating the error for a
-function of multiple variables: $$z = f(u,v,w),$$ Where the number of
+In propagating the error of some quantity with an uncertain observation, 
+we are faced with estimating the error for a
+function of potentially multiple variables: $$z = f(u,v,w),$$ where the number of
 variables can be thought of as the number of "things with error." Here
 we consider three variables. There are a number of "standard" methods 
 for propagating error typically learned early in the career -- 
