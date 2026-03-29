@@ -142,10 +142,10 @@ and can be implemented in two lines of Python
 
 # Example: Absolute magnitudes from parallax
 It is a common exercise in astronomy to estimate the absolute magnitude, the 
-total brightness in magnitudes, of a star. Using the *distance modulus* we can 
-do this simply as
+total brightness in magnitudes, of a star. We can 
+do this as
 
-$$ M - m - 5 log_{10}(d) + 5 $$
+$$ M = m - 5 log_{10}(d) + 5 $$
 
 where $M$ is the absolute magnitude, $m$ is the apparent magnitude, and 
 $d$ is the distance to the star in parsecs. 
