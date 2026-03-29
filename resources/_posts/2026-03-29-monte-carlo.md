@@ -124,7 +124,7 @@ trivially -- the *Monte Carlo* method.
 The Monte Carlo method involves random sampling of the underlying distribution
 and constructing an approximation of the distribution of out quantity of interest 
 $z$. Begin by observing that if we have a measurement $u$ with variance
-$\sigma_u^2$ and mean $\mu_u = u$ then $u$ is expected to be normally distributed.
+$\sigma_u$ and mean $\mu_u = u$ then $u$ is expected to be normally distributed.
 
 The Monte Carlo procedure is then simple:
 
@@ -135,7 +135,9 @@ The Monte Carlo procedure is then simple:
 After this process we will have the posterior distribution for $z$ in our hands
 and statistics such as the mean, median, and percentiles (uncertainties) can 
 be read off directly. This process is attractive as it makes no assumptions about 
-the underlying magnitudes or distributions and can be implemented in two lines of Python 
+the underlying magnitudes or distributions, generalizes trivially to functions of 
+$N$ variables,
+and can be implemented in two lines of Python 
 (which we will see below).
 
 # Example: Absolute magnitudes from parallax
