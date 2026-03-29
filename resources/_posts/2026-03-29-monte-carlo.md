@@ -225,7 +225,49 @@ def main() -> int:
     return os.EX_OK
 ```
 
-This, in turn, provides the estimate $M$ = 10.49 $\pm$ 0.000176 -- 
+The main piece doing the work is ``monte_carlo_error_mag``
+```python
+def monte_carlo_error_mag(
+    pi: float, dpi: float, m: float, dm: float
+) -> tuple[float, float, float]:
+    n_mc = 100000
+    # draw parallax and apparent mag distributions
+    pis = np.random.normal(pi, dpi, n_mc)
+    ms = np.random.normal(m, dm, n_mc)
+
+    # construct distance distribution
+    ds = distance(pis)
+
+    # compute absolute magnitudes
+    ys = absolute_magnitude(ms, ds)
+
+    return extract_stats(ys)
+```
+This pulls a set of ``n_mc`` parallax samples from a normal 
+distribution using ``np.random.normal(loc, scale, size)``.
+Those are passed into ``distance(pi)`` to produce a distribution 
+of distance samples, which are in turn passed in to 
+``absolute_magnitude`` to get the final posterior distribution 
+of absolute magnitudes.
+
+The final piece worth mentioning is ``extract_stats``:
+```python
+def extract_stats(vals: np.ndarray | float) -> tuple[float, float, float]:
+    percentiles = np.percentile(vals, [16, 50, 84])
+    q = np.diff(percentiles)
+    err_lo = q[0]
+    err_hi = q[1]
+    nominal = percentiles[1]
+    return nominal, err_hi, err_lo
+```
+This pulls out the 16th, 50th, and 84th percentiles of the absolute 
+magnitude distribution. For normally distributed data this corresponds 
+directly to the mean and standard deviations (with ``err_hi`` = ``err_lo``).
+The reason for doing this instead of something like ``np.std`` is that 
+this accomodates asymmetric posteriors. This choice is robust 
+and the statistics of choice in [emcee][emcee].
+
+This method, in turn, provides the estimate $M$ = 10.49 $\pm$ 0.000176 -- 
 more than a factor of 2x different! In this case the Taylor expansion based 
 error estimate underestimated the actual variance by a factor of about 2.5.
 All in all this example was relatively mild: the magnitudes small and nonlinearities 
@@ -297,5 +339,6 @@ estimate the variance. Moreover, when nonlinearities are strong it fails
 to recover the actual distribution, forcing the assumption of Gaussianity 
 on the posterior.
 
+[emcee]: https://emcee.readthedocs.io/en/stable/tutorials/line/
 [lalande]: https://en.wikipedia.org/wiki/Lalande_21185
 [parallax]: https://en.wikipedia.org/wiki/Stellar_parallax
