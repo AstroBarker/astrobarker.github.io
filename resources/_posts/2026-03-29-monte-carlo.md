@@ -180,47 +180,49 @@ This provides us with the estimate $M$ = 10.49 $\pm$ 6.97x10$^{-5}$
 We can implement the Monte Carlo procedure with Python as
 
 ```python
-def absolute_magnitude(m: np.ndarray | float, d: np.ndarray | float) -> np.ndarray | float:
+def absolute_magnitude(
+    m: np.ndarray | float, d: np.ndarray | float
+) -> np.ndarray | float:
     return m - 5.0 * np.log10(d) + 5.0
 
 def distance(pi: np.ndarray | float) -> np.ndarray | float:
     return 1.0 / pi
 
 def extract_stats(vals: np.ndarray | float) -> tuple[float, float, float]:
-  percentiles = np.percentile(vals, [16, 50, 84])
-  q = np.diff(percentiles)
-  err_lo = q[0]
-  err_hi = q[1]
-  nominal = percentiles[1]
-  return nominal, err_hi, err_lo
+    percentiles = np.percentile(vals, [16, 50, 84])
+    q = np.diff(percentiles)
+    err_lo = q[0]
+    err_hi = q[1]
+    nominal = percentiles[1]
+    return nominal, err_hi, err_lo
 
 def monte_carlo_error_mag(
-        pi: float, dpi: float, m: float, dm: float
+    pi: float, dpi: float, m: float, dm: float
 ) -> tuple[float, float, float]:
-  n_mc = 25000
-  # draw parallax and apparent mag distributions
-  pis = np.random.normal(pi, dpi, n_mc)
-  ms = np.random.normal(m, dm, n_mc)
+    n_mc = 100000
+    # draw parallax and apparent mag distributions
+    pis = np.random.normal(pi, dpi, n_mc)
+    ms = np.random.normal(m, dm, n_mc)
 
-  # construct distance distribution
-  ds = distance(pis)
+    # construct distance distribution
+    ds = distance(pis)
 
-  # compute absolute magnitudes
-  ys = absolute_magnitude(ms, ds)
+    # compute absolute magnitudes
+    ys = absolute_magnitude(ms, ds)
 
-  return extract_stats(ys)
+    return extract_stats(ys)
 
 
 def main() -> int:
-  pi = 0.39275
-  dpi = 3.21e-5
+    pi = 0.39275
+    dpi = 3.21e-5
 
-  m = 7.520
-  dm = 0
+    m = 7.520
+    dm = 0
 
-  mean, hi, lo = monte_carlo_error_mag(pi, dpi, m, dm)
-  print(f"M = {mean} + {hi} - {lo}")
-  return os.EX_OK
+    mean, hi, lo = monte_carlo_error_mag(pi, dpi, m, dm)
+    print(f"M = {mean} + {hi} - {lo}")
+    return os.EX_OK
 ```
 
 This, in turn, provides the estimate $M$ = 10.49 $\pm$ 0.000176 -- 
@@ -250,31 +252,27 @@ def f(x: np.ndarray | float) -> np.ndarray | float:
     return np.power(10.0, x)
 
 def extract_stats(vals: np.ndarray | float) -> tuple[float, float, float]:
-  percentiles = np.percentile(vals, [16, 50, 84])
-  q = np.diff(percentiles)
-  err_lo = q[0]
-  err_hi = q[1]
-  nominal = percentiles[1]
-  return nominal, err_hi, err_lo
+    percentiles = np.percentile(vals, [16, 50, 84])
+    q = np.diff(percentiles)
+    err_lo = q[0]
+    err_hi = q[1]
+    nominal = percentiles[1]
+    return nominal, err_hi, err_lo
 
-
-def monte_carlo_error(
-        x: float, dx: float
-) -> tuple[float, float, float]:
-  n_mc = 500000 # 25000
-  # draw x from normal distribution
-  xs = np.random.normal(x, dx, n_mc)
-  ys = f(xs)
-  return extract_stats(ys)
-
+def monte_carlo_error(x: float, dx: float) -> tuple[float, float, float]:
+    n_mc = 100000
+    # draw x from normal distribution
+    xs = np.random.normal(x, dx, n_mc)
+    ys = f(xs)
+    return extract_stats(ys)
 
 def main() -> int:
-  x = 51.125
-  dx = 0.1
+    x = 51.125
+    dx = 0.1
 
-  mean, hi, lo = monte_carlo_error(x, dx)
-  print(f"M = {mean} + {hi} - {lo}")
-  return os.EX_OK
+    mean, hi, lo = monte_carlo_error(x, dx)
+    print(f"M = {mean} + {hi} - {lo}")
+    return os.EX_OK
 ```
 This time the Taylor expansion procedure give $z$ = 1.33352x10$^{51}$ $\pm$ 
 3.0705x10$^{50}$. The Monte Carlo process, on the other hand, gives
