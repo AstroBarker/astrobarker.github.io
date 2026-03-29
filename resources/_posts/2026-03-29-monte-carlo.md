@@ -144,6 +144,7 @@ total brightness in magnitudes, of a star. Using the *distance modulus* we can
 do this simply as
 
 $$ M - m - 5 log_{10}(d) + 5 $$
+
 where $M$ is the absolute magnitude, $m$ is the apparent magnitude, and 
 $d$ is the distance to the star in parsecs. 
 Simply, this computes the actual brightness of a star adjusted for 
@@ -167,6 +168,7 @@ $$\begin{aligned}
            & = \sigma_m^2 + \sigma_d^2 (\frac{5}{ln(10)d})^2
 \end{split}
 \end{aligned}$$
+
 with
 $$\sigma_d^2 = \sigma_{\varpi}^2 (\partial_{\varpi}d)^2 = \frac{\sigma_d^2}{\varpi^2}.$$
 
