@@ -170,6 +170,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 with
+
 $$\sigma_d^2 = \sigma_{\varpi}^2 (\partial_{\varpi}d)^2 = \frac{\sigma_d^2}{\varpi^2}.$$
 
 This provides us with the estimate $M$ = 10.49 $\pm$ 6.97x10$^{-5}$
