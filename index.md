@@ -28,6 +28,7 @@ around understanding the origins of high-energy astrophysical transients --
 primarily supernovae and kilonovae.
 I am greatly interested in the development and 
 implementation of high-order accurate numerical methods in these contexts.
+I am passionate about the development and support of open source community codes.
 
 Currently, I am a Metropolis computational physics postdoctoral 
 fellow at Los Alamos National Laboratory in the Computational Physics 
