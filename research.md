@@ -13,7 +13,7 @@ Research
 > Fares to uncomprehending life; -- George Sterling
 
 
-## Next Generation High-Order Simulation Codes
+## Open Source Simulation Codes
 
 As we move into the era of exascale computing, we need modern simulation codes that can take full advantage of these architectures. 
 I am a developer for the open-source general relativistic radiation magnetohydrodynamics software [Phoebus][phoebus] and a past developer for 
