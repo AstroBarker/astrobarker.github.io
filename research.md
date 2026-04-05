@@ -16,6 +16,9 @@ Research
 ## Open Source Simulation Codes
 
 As we move into the era of exascale computing, we need modern simulation codes that can take full advantage of these architectures. 
+This poses a significant engineering challenge as the number of programming models continues to grow.
+
+
 I am a developer for the open-source general relativistic radiation magnetohydrodynamics software [Phoebus][phoebus] and a past developer for 
 the toolkit for high-order neutrino-radiation hydrodynamics ([thornado][thornado]).
 
