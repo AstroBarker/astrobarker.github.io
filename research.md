@@ -118,7 +118,7 @@ trying to infer properties from observed light curves, and a strong, linear rela
 
 Following up on this, we used these results with real observations to infer iron core masses for a population of SNe. 
 In this paper, we apply Bayesian inference methods to connect the inferred iron core mass distribution to ZAMS mass properties, 
-finding evidence of very high red supergiant progenitors.
+finding evidence of high mass red supergiant progenitors.
 
 * * *
 
