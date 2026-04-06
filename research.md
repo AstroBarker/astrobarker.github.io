@@ -31,27 +31,57 @@ that can take full advantage of these architectures.
 This poses a significant engineering challenge as the number of programming 
 models continues to grow.
 
+**[Athelas][athelas]** is being developed to simulate the electromagnetic emission 
+from transients, primarily supernovae. ``Athelas`` evolves Lagrangian hydrodynamics 
+coupled to a two moment radiation transport model. 
+It leverages a discontinuous Galerkin spatial 
+discretization of the fluid and radiation fields to acheive robust solutions 
+Time integration is implemented with high-order, fully coupled implicit-explicit (IMEX) 
+methods -- no operator splitting is required.
+at high order accuracy. ``Athelas`` includes Saha ionization coupled to the 
+equation of state, a radioactive decay network for nickel heating, and can artificially 
+drive explosions. In the near future it will incorporate a Rayleigh Taylor mixing model.
+``Athelas`` includes a very flexible ``package`` system for building up the partial 
+differential equations being solved, automatically threading physics into the IMEX
+integrator, making it very simple to add new physics. ``Athelas`` includes 
+the capability to map outputs from the MESA stellar evolutionary code into 
+its input format to make robust predictions.
 
-I am a developer for the open-source general relativistic radiation magnetohydrodynamics software [Phoebus][phoebus] and a past developer for 
-the toolkit for high-order neutrino-radiation hydrodynamics ([thornado][thornado]).
-
-**Phoebus** is developed to tackle a range of problems in relativistic astrophysics, with emphasis on core-collapse supernovae, 
+**[Phoebus][phoebus]** is developed to tackle a range of problems in relativistic astrophysics, with emphasis on core-collapse supernovae, 
 neutron star mergers, and black hole accretion. It is developed from the ground using a GPU-first development strategy. 
 To facilitate performance portability, Phoebus is built on [Kokkos][kokkos], a parallelization abstraction layer that allows 
-Phoebus to run on any GPU or CPU architecture by simply changing compile-time options. A software methods paper is in 
-progress and the first production runs are just around the corner!
+Phoebus to run on any GPU or CPU architecture by simply changing compile-time options. 
 
-**Thornado** is a GPU-capable code utilizing a discontinuous Galerkin phase-space discretization. 
-Discontinuous Galerkin methods are a very promising method for simulating astrophysical phenomena. They can be thought of as the high-order 
-extension of finite volume methods — evolving a high-order approximation of the solution on each cell instead of cell averages — avoiding 
-the need for complicated reconstruction steps. As a result, the computational stencil is independent of the order of accuracy — only 
-nearest-neighbor communication is needed, making them especially parallelizable. They naturally conserve angular momentum in smooth flows 
-and are generally conservative in the same sense as finite 
-volume methods. Most of my work has been on the hydrodynamics. It is by now well understood that hydrodynamics plays a crucial 
-role in CCSNe. Turbulence, convection, and other hydrodynamic instabilities all play pivotal roles in driving the explosion. 
-It is important that the governing hydrodynamic equations are solved accurately and efficiently. My work has been in adapting 
-the solvers to accommodate a tabulated nuclear matter equation of state (EoS). My undergraduate thesis focused on implementing 
-characteristic slope limiting, as this has been shown to be more effective than limiting on the conserved variables.
+**[Thornado][thornado]** is a GPU-capable code utilizing a discontinuous 
+Galerkin phase-space discretization developed primarily for modeling core-collapse 
+supernovae. By using discontinuous Galerkin methods for both hydrodynamics and 
+neutrino radiation transport, thornado can achieve high order accurate solutions for 
+both the fluid and radiation fields, capturing the complex flows that assist in 
+shock revival, and ensure realizability of the fermionic neutrino distribution 
+functions. Thornado provides neutrino transport capabilities to the 
+multiphysics code [Flash-X][flashx].
+
+* * *
+
+## Discontinuous Galerkin Finite Element Method
+
+Discontinuous Galerkin methods are a very promising method for simulating 
+astrophysical phenomena. They can be thought of as the high-order 
+love child of finite volume and finite element methods.
+Similar to finite elements, the solution is represented as a basis expansion.
+However, unlike finite elements, these basis representations may be discontinuous 
+across cells. Neighboring cells are connected via numerical fluxes  -- 
+Riemann solvers -- identical to finite volume methods.
+By evolving a high-order approximation 
+of the solution on each cell instead of cell averages we avoid
+the need for complicated reconstruction steps. As a result, the 
+computational stencil is independent of the order of accuracy — only 
+nearest-neighbor communication is needed, making them especially parallelizable. 
+Discontinuous Galerkin methods have a number of desirable qualitities, 
+including improved angular momentum conservation, more natural capturing 
+of asymptotic limits in radiation transport, and polyunomial order adaptivity 
+in space. They are high resolution shock capturing schemes that are conservative 
+of the cell average in the finite volume sense.
 
 * * *
 
@@ -100,9 +130,6 @@ progenitor stars with ZAMS masses ranging from 9 to 120 solar masses. I tested t
 to the nuclear equation of state and explored correlations of the signals with fundamental nuclear physics quantities, 
 such as the symmetry energy and effective nucleon mass.
 
-I will be continuing this work with a different set of EOS tables reflecting a wide range of key 
-parameters with a larger set of progenitor stars, so stay tuned for updates!
-
 * * *
 
 ## Prospects for High Energy Follow-up Studies of Gravitational Wave Transients
@@ -125,12 +152,9 @@ star apart and driving the explosion runs out of energy and stalls. The exact na
 still a matter of active research. I developed data analysis tools to investigate the relative contributions of 
 neutrino-driven convection and the standing accretion shock instability to shock revival.
 
-- **Construction of a Vacuum Suitcase:** For one summer, I worked in an experimental condensed matter lab. 
-In addition to helping run a few experiments and calibrate a new instrument, I built a portable vacuum chamber 
-for safely moving samples between instruments.
-
 * * *
 
+[flashx]: https://flash-x.org/
 [athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
 [thornado]: https://github.com/endeve/thornado
