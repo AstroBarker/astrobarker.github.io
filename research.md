@@ -10,8 +10,19 @@ Research
 > Splendors of elemental strife;
 > Smit suns that startle back the gloom;
 > New light whose tale of stellar doom
-> Fares to uncomprehending life; -- George Sterling
+> Fares to uncomprehending life; 
+> -- George Sterling, The Testimony of the Suns, 1907
 
+The transient sky is diverse and ever-changing.
+Supernovae, having been observed and recorded by humanity for the 
+whole of our species' history, are among the most prolific phenomena 
+observed in the night sky. These are magnificent explosions following 
+stellar death. They are, literally, the last testimony of a dying star.
+It is our charge as practitioners of stellar astrophysics to interpret 
+these testimonies: what is the star trying to tell us? What can we learn
+about its life, death, and environment?
+My work involves deploying and developing computational models 
+to interpret these testimonies.
 
 ## Open Source Simulation Codes
 
