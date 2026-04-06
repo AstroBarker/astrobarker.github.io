@@ -61,6 +61,14 @@ shock revival, and ensure realizability of the fermionic neutrino distribution
 functions. Thornado provides neutrino transport capabilities to the 
 multiphysics code [Flash-X][flashx].
 
+I contribute to a number of other frameworks that support downstream
+science production codes such as the [parthenon][parthenon] adaptive
+mesh refinement framework and the [singularity-eos][singularity-eos]
+performance portable equation of state library.
+
+On my [GitHub][github] you may find software that I 
+have produced, including codes for protytyping and exploring methods.
+
 * * *
 
 ## Discontinuous Galerkin Finite Element Method
@@ -154,6 +162,9 @@ neutrino-driven convection and the standing accretion shock instability to shock
 
 * * *
 
+[singularity-eos]: https://github.com/lanl/singularity-eos
+[parthenon]: https://github.com/parthenon-hpc-lab/parthenon/
+[github]: https://github.com/astrobarker
 [flashx]: https://flash-x.org/
 [athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
