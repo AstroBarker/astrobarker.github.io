@@ -44,7 +44,7 @@ drive explosions. In the near future it will incorporate a Rayleigh Taylor mixin
 ``Athelas`` includes a very flexible ``package`` system for building up the partial 
 differential equations being solved, automatically threading physics into the IMEX
 integrator, making it very simple to add new physics. ``Athelas`` includes 
-the capability to map outputs from the MESA stellar evolutionary code into 
+the capability to map outputs from the ``MESA`` stellar evolutionary code into 
 its input format to make robust predictions.
 
 **[Phoebus][phoebus]** is developed to tackle a range of problems in relativistic astrophysics, with emphasis on core-collapse supernovae, 
