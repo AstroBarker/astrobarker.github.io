@@ -26,10 +26,20 @@ to interpret these testimonies.
 
 ## Open Source Simulation Codes
 
-As we move into the era of exascale computing, we need modern simulation codes 
-that can take full advantage of these architectures. 
-This poses a significant engineering challenge as the number of programming 
-models continues to grow.
+Scientific software poses a host of unique scientific, engineering, and 
+collaborative questions. How do we create software that is robust, 
+accurate, and capable of pushing the frontiers of science?
+How do we create scientific software that can survive into the future, 
+answering not only the questions of today but those of tomorrow?
+Moreover, as we move into the era of exascale computing, 
+we need modern simulation codes  that can take full advantage 
+of these architectures. This poses a significant engineering challenge as the 
+number of programming models continues to grow.
+Ultimately, we seek to empower users to drive scientific innovation.
+The answer lies in **research software engineering**: the union of 
+domain knowledge, numerical methods, and modern software development practices.
+I am a developer for a number of open source scientific codes working to 
+answer these questions and more.
 
 **[Athelas][athelas]** is being developed to simulate the electromagnetic emission 
 from transients, primarily supernovae. ``Athelas`` evolves Lagrangian hydrodynamics 
