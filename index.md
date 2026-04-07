@@ -6,6 +6,11 @@ cmd: cat about.md
 
 # Brandon L. Barker, PhD
 
+> To whom the unceasing suns belong,
+> And cause is one with consequence,-
+> To whose divine, inclusive sense
+> The moan is blended with the song -- Ambrose Bierce, Invocation
+
 Welcome to homepage of Brandon L. Barker, PhD -- the best stop on the information superhighway!
 My current state:
 
