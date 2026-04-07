@@ -41,8 +41,8 @@ and Methods group.
 My work now focuses on the development of novel multiphysics algorithms to support 
 a wide range of applications from high energy astrophysics to terrestrial 
 experimental design.
-Broadly, I am interested in numerical relativity, 
-numerical methods, multi-physics problems, and the development of open-source scientific software. 
+Broadly, I am interested in numerical methods, multi-physics problems, 
+and the development of open-source scientific software. 
 
 Previously I was a NSF Graduate Research Fellow at Michigan State University working with Sean Couch. 
 My work PhD involved high-fidelity modeling of core-collapse supernovae and connecting neutrino-driven 
