@@ -14,7 +14,7 @@ cmd: cat about.md
 Welcome to homepage of Brandon L. Barker, PhD -- the best stop on the information superhighway!
 My current state:
 
-- Metropolis Postdoctoral Fellow
+- Metropolis Computational Physics Postdoctoral Fellow
 - Computing and Artificial Intelligence Division
 - Computational Physics and Methods Group (CAI-2)
 - Center for Theoretical Astrophysics
