@@ -44,9 +44,9 @@ experimental design.
 Broadly, I am interested in numerical methods, multi-physics problems, 
 and the development of open-source scientific software. 
 
-Previously I was a NSF Graduate Research Fellow at Michigan State University working with Sean Couch. 
-My work PhD involved high-fidelity modeling of core-collapse supernovae and connecting neutrino-driven 
-models to observations.
+Previously I was a NSF Graduate Research Fellow at Michigan State University 
+working with Sean Couch. My work PhD involved high-fidelity modeling of 
+core-collapse supernovae and connecting neutrino-driven models to observations.
  
 Outside of work, I enjoy backpacking, kayaking, nature photography, cooking, 
 perfecting my coffee brew, and writing less useful software.
