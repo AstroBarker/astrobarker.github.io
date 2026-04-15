@@ -1,4 +1,6 @@
 window.onload = function() {
+   <script data-goatcounter="https://astrobarker.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
     var s = document.getElementsByTagName('div'), ti;
     if (!s) return;
     big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
@@ -53,5 +55,3 @@ window.onload = function() {
     };
     go(big.current);
 };
-<script data-goatcounter="https://astrobarker.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
