@@ -53,3 +53,5 @@ window.onload = function() {
     };
     go(big.current);
 };
+<script data-goatcounter="https://astrobarker.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
