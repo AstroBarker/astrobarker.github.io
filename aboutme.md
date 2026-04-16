@@ -16,7 +16,7 @@ in the Computational Physics and Methods group.
 
 My primary research interests are the explosion mechanisms of core-collapse supernovae,
 understanding which stars explode as CCSNe, the origins of the heaviest elements, and 
-the development of portable, scalable, open source scientific software. I am a lead developer of 
+the development of portable, scalable, open source scientific software. I am the lead developer of 
 [athelas][athelas], a new high-order code in development for modeling supernova light curves and 
 [phoebus][phoebus], a general relativistic radiation magnetohydrodynamic code for relativistic astrophysics.
 
