@@ -34,7 +34,8 @@ supernova [radiation hydrodynamics code](https://ui.adsabs.harvard.edu/abs/2021A
 I graduated with honors from the University of Tennessee, Knoxville (UTK) in 2019 with double majors in 
 physics and mathematics and a minor in astronomy. That same year I was named Chancellor’s Undergraduate 
 Researcher of the Year for my exceptional academic record and research contributions. 
-My research contributions were further recognized by the National Science Foundation through a NSF Graduate Research Fellowship.
+My research contributions were further recognized by the National Science 
+Foundation through a NSF Graduate Research Fellowship.
 
 At UTK I worked with Eirik Endeve and Anthony Mezzacappa exploring the explosion mechanism of core-collapse 
 supernovae and developing thornado radiation hydrodynamics code, 
