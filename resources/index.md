@@ -1,6 +1,6 @@
 ---
 layout: dir
-title: astrobarker.github.io/resources
+title: astrobarker.dev/resources
 cmd: "ls -la"
 pwd: resources
 ---

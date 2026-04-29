@@ -1,6 +1,6 @@
 ---
 layout: term
-title: astrobarker.github.io
+title: astrobarker.dev
 cmd: cat research.md
 ---
 
