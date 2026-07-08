@@ -12,12 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
 
-    <!-- Toggle Switch for Dark Mode -->
-    <div class="theme-toggle">
-      <input type="checkbox" id="theme-toggle" />
-      <label for="theme-toggle">🌙/☀️</label>
-    </div>
-
+    {% seo %}
 
     <!-- Google Analytics -->
     <script>
@@ -34,6 +29,12 @@
             async src="//gc.zgo.at/count.js"></script>
   </head>
   <body class="site md">
+    <!-- Toggle Switch for Dark Mode -->
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode" />
+      <label for="theme-toggle">🌙/☀️</label>
+    </div>
+
     <!-- begin subtemplate -->
     {% include anchor_headings.html
       html=content
@@ -47,6 +48,7 @@
       document.addEventListener('DOMContentLoaded', () => {
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
+        if (!themeToggle) return;
 
         // Check localStorage for theme preference
         if (localStorage.getItem('theme') === 'dark') {
@@ -69,5 +71,3 @@
 
   </body>
 </html>
-{% seo %}
-

@@ -7,7 +7,7 @@ url:              https://astrobarker.dev
 tagline: Personal webpage for Brandon L. Barker, PhD (astrobarker).
 description: Personal world wide webpage for Dr. Brandon L. Barker, computational astrophysicist at Los Alamos National Laboratory.
 baseurl:          /
-author: &default-author
+author: &default_author
   name:           Brandon L. Barker
   url:            https://astrobarker.dev
   email:          barker@lanl.gov
@@ -32,14 +32,13 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: main
+      layout: term
   -
     scope:
       path: "notes"
       type: "posts"
     values:
       layout: "post"
-      author: "brandon"
       author: *default_author
   -
     scope:
@@ -47,20 +46,19 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "brandon"
       author: *default_author
   -
     scope:
       path: "etc"
       type: "pages"
     values:
-      layout: main
+      layout: term
   -
     scope:
       path: "slides"
       type: "pages"
     values:
-      layout: main
+      layout: term
 
 # plugins: ["jekyll-paginate"]
 plugins:

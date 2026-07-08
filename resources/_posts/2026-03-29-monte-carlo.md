@@ -11,25 +11,25 @@ author: Brandon Barker
 * * *
 
 There is no such thing as a perfect measurement.
-Inevitably we are met with the need to propagate measurement 
-uncertainty on to some derived quantity. Given a measurement of 
-a star's surface temperature and luminosity we may seek to 
-estimate its radius. Given measurement uncertainty on the 
-effective temperature and luminosity, how much can we trust 
+Inevitably we are met with the need to propagate measurement
+uncertainty on to some derived quantity. Given a measurement of
+a star's surface temperature and luminosity we may seek to
+estimate its radius. Given measurement uncertainty on the
+effective temperature and luminosity, how much can we trust
 the estimated radius?
 
-In propagating the error of some quantity with an uncertain observation, 
+In propagating the error of some quantity with an uncertain observation,
 we are faced with estimating the error for a
 function of potentially multiple variables: $$z = f(u,v,w),$$ where the number of
 variables can be thought of as the number of "things with error." Here
-we consider three variables. There are a number of "standard" methods 
-for propagating error typically learned early in the career -- 
+we consider three variables. There are a number of "standard" methods
+for propagating error typically learned early in the career --
 when to add in quadrature, or inverses, or when to scale multiplicatively.
-A number of questions arise: Where do these rules come from? 
+A number of questions arise: Where do these rules come from?
 When are they appropriate? We will examine these questions and, ultimately,
-propose an alternative methods -- Monte Carlo error propagation.
+propose an alternative method -- Monte Carlo error propagation.
 
-## Derivation of the tradiational method
+## Derivation of the traditional method
 
 The true variance of our quantity $z$ is given by
 
@@ -45,7 +45,7 @@ $$\label{eq:cov}
 
 For many applications of interest, we don't have knowledge of
 the underlying distribution $P(u,v,w)$, so we must resort to
-approximations. 
+approximations.
 Ultimately, we seek to estimate $\sigma_z^2$.
 Let us begin by Taylor expanding $z$ about $\mu_z$.
 
@@ -59,10 +59,10 @@ $$\begin{aligned}
 (z - \mu_z)^2 &\approx (u - \mu_u)^2 (\partial_u z)^2 + (v - \mu_v)^2 (\partial_v z)^2\\
           &+ (w - \mu_w)^2 (\partial_w z)^2 + 2 (u-\mu_u)(v-\mu_v)(\partial_u z) (\partial_v z) \\
           &+ 2 (u-\mu_u)(w-\mu_w)(\partial_u z) (\partial_w z) + 2 (v-\mu_v)(w-\mu_w)(\partial_v z) (\partial_w z)
-\end{split}          
+\end{split}
 \end{aligned}$$
 
-Inserting the above into the expression for $\sigma_z^2$ 
+Inserting the above into the expression for $\sigma_z^2$
 we find the following expression:
 
 $$\begin{aligned}
@@ -77,7 +77,7 @@ $$\begin{aligned}
 \end{split}
 \end{aligned}$$
 
-Now, recalling that the derivatives about have all been evaluated at
+Now, recalling that the derivatives above have all been evaluated at
 their respective means and are constants here, we may make use of two
 simple definitions to finish simplifying our expression. First, notice
 from the expression for $\sigma_z^2$ that the first three terms in the above
@@ -91,7 +91,7 @@ $$\begin{aligned}
 \label{eq:error}
 \sigma_z^2 &\approx \sigma_u^2 (\partial_u z)^2 + \sigma_v^2 (\partial_v z)^2 + \sigma_w^2 (\partial_w z)^2\\
            &+ 2 \sigma_{uv}(\partial_u z)(\partial_v z) + 2 \sigma_{uw}(\partial_u z)(\partial_w z)\\
-           &+ 2 \sigma_{vw}(\partial_v z)(\partial_w z) 
+           &+ 2 \sigma_{vw}(\partial_v z)(\partial_w z)
 \end{split}
 \end{aligned}$$
 
@@ -99,30 +99,30 @@ Then we have an expression to approximate error that depends on the
 variances, covariances, and functional form of the fit. This may be
 generalized to any number of variables.
 
-+ **Exercise**: Let $z = uv$ where $u$ and $v$ are uncorrelated variables ($\sigma_{uv} = 0$). 
-  Using the relationship above derive the error propagation rule for multiplicative 
++ **Exercise**: Let $z = uv$ where $u$ and $v$ are uncorrelated variables ($\sigma_{uv} = 0$).
+  Using the relationship above derive the error propagation rule for multiplicative
   error propagation.
 
 We may make a few observations this expression for the error.
-* First, this form for error propagation assumes Gaussianity. $z$, $u$, and $v$ are 
-  all described by normal distributions. This form **cannot treat non-Gaussian 
-  posteriors.** This means that asymmetric uncertainties, $x = \mu^{+a}_{-b}$, 
+* First, this form for error propagation assumes Gaussianity. $z$, $u$, and $v$ are
+  all described by normal distributions. This form **cannot treat non-Gaussian
+  posteriors.** This means that asymmetric uncertainties, $x = \mu^{+a}_{-b}$,
   cannot be treated.
-* Next, we derived this using a Taylor expansion. The usual caveats apply: 
-  the first order series assumes that that magnitudes are small
+* Next, we derived this using a Taylor expansion. The usual caveats apply:
+  the first order series assumes that the magnitudes are small
   and that the function is approximately linear in the neighborhood of interest.
 
-We will explore the implications of these assumptions in a future article but it 
-is worth noting that these assumptions are readily broken in astronomy where one 
+We will explore the implications of these assumptions in a future article but it
+is worth noting that these assumptions are readily broken in astronomy where one
 regularly needs to propagate error from logarithmic functions, for example.
 
 ## Monte Carlo error propagation
-Next we will seek an alternative process for propagating error that 
-removes the assumptions from the previous section and can be implemented 
+Next we will seek an alternative process for propagating error that
+removes the assumptions from the previous section and can be implemented
 trivially -- the *Monte Carlo* method.
 
 The Monte Carlo method involves random sampling of the underlying distribution
-and constructing an approximation of the distribution of out quantity of interest 
+and constructing an approximation of the distribution of our quantity of interest
 $z$. Begin by observing that if we have a measurement $u$ with variance
 $\sigma_u$ and mean $\mu_u = u$ then $u$ is expected to be normally distributed.
 
@@ -133,23 +133,23 @@ The Monte Carlo procedure is then simple:
 * Repeat $N$ times, where $N$ is sufficiently large.
 
 After this process we will have the posterior distribution for $z$ in our hands
-and statistics such as the mean, median, and percentiles (uncertainties) can 
-be read off directly. This process is attractive as it makes no assumptions about 
-the underlying magnitudes or distributions, generalizes trivially to functions of 
+and statistics such as the mean, median, and percentiles (uncertainties) can
+be read off directly. This process is attractive as it makes no assumptions about
+the underlying magnitudes or distributions, generalizes trivially to functions of
 $N$ variables,
-and can be implemented in two lines of Python 
+and can be implemented in two lines of Python
 (which we will see below).
 
 # Example: Absolute magnitudes from parallax
-It is a common exercise in astronomy to estimate the absolute magnitude, the 
-total brightness in magnitudes, of a star. We can 
+It is a common exercise in astronomy to estimate the absolute magnitude, the
+total brightness in magnitudes, of a star. We can
 do this as
 
 $$ M = m - 5 log_{10}(d) + 5 $$
 
-where $M$ is the absolute magnitude, $m$ is the apparent magnitude, and 
-$d$ is the distance to the star in parsecs. 
-Simply, this computes the actual brightness of a star adjusted for 
+where $M$ is the absolute magnitude, $m$ is the apparent magnitude, and
+$d$ is the distance to the star in parsecs.
+Simply, this computes the actual brightness of a star adjusted for
 its distance.
 There are a number of ways to measure
 distance, but an early method is using [parallax][parallax]:
@@ -157,11 +157,11 @@ distance, but an early method is using [parallax][parallax]:
 $$ d = 1 / \varpi $$
 
 where $\varpi$ is the parallax in arcseconds.
-Let's consider the familiar star [Lalande 21185][lalande]. 
+Let's consider the familiar star [Lalande 21185][lalande].
 Lalande 21185 has a parallax of 0.39275 $\pm$ 0.0000321 arcsec.
-It has a V-band apparent magnitude of roughly 7.52 -- for this 
-exercise we will take the error in the apparent magnitude to be zero 
-for demonstration purposes. We can approximate the uncertainty in the 
+It has a V-band apparent magnitude of roughly 7.52 -- for this
+exercise we will take the error in the apparent magnitude to be zero
+for demonstration purposes. We can approximate the uncertainty in the
 absolute magnitude in the Taylor expansion form as
 
 $$\begin{aligned}
@@ -243,11 +243,11 @@ def monte_carlo_error_mag(
 
     return extract_stats(ys)
 ```
-This pulls a set of ``n_mc`` parallax samples from a normal 
+This pulls a set of ``n_mc`` parallax samples from a normal
 distribution using ``np.random.normal(loc, scale, size)``.
-Those are passed into ``distance(pi)`` to produce a distribution 
-of distance samples, which are in turn passed in to 
-``absolute_magnitude`` to get the final posterior distribution 
+Those are passed into ``distance(pi)`` to produce a distribution
+of distance samples, which are in turn passed in to
+``absolute_magnitude`` to get the final posterior distribution
 of absolute magnitudes.
 
 The final piece worth mentioning is ``extract_stats``:
@@ -260,30 +260,30 @@ def extract_stats(vals: np.ndarray | float) -> tuple[float, float, float]:
     nominal = percentiles[1]
     return nominal, err_hi, err_lo
 ```
-This pulls out the 16th, 50th, and 84th percentiles of the absolute 
-magnitude distribution. For normally distributed data this corresponds 
+This pulls out the 16th, 50th, and 84th percentiles of the absolute
+magnitude distribution. For normally distributed data this corresponds
 directly to the mean and standard deviations (with ``err_hi`` = ``err_lo``).
-The reason for doing this instead of something like ``np.std`` is that 
-this accomodates asymmetric posteriors. This choice is robust 
+The reason for doing this instead of something like ``np.std`` is that
+this accomodates asymmetric posteriors. This choice is robust
 and the statistics of choice in [emcee][emcee].
 
-This method, in turn, provides the estimate $M$ = 10.49 $\pm$ 0.000176 -- 
-more than a factor of 2x different! In this case the Taylor expansion based 
+This method, in turn, provides the estimate $M$ = 10.49 $\pm$ 0.000176 --
+more than a factor of 2x different! In this case the Taylor expansion based
 error estimate underestimated the actual variance by a factor of about 2.5.
-All in all this example was relatively mild: the magnitudes small and nonlinearities 
-not too severe. Even still, with only a few lines of Python we could improve our 
+All in all this example was relatively mild: the magnitudes small and nonlinearities
+not too severe. Even still, with only a few lines of Python we could improve our
 estimate by a factor of 2!
 
 ## Example: exponentiation
-It is common in astronomy, and many other fields, to produce log quantities 
-with uncertainties on the logged quantity. This is a great use case for 
-the deficiency of the Taylor expansion procedure: given a quantity $x = log_{10}(z)$ 
+It is common in astronomy, and many other fields, to produce log quantities
+with uncertainties on the logged quantity. This is a great use case for
+the deficiency of the Taylor expansion procedure: given a quantity $x = log_{10}(z)$
 with uncertainty $\sigma_x$, what is the uncertainty of $z = 10^x$?
-Consider $x$ = 51.125 with $\sigma_x$ = 0.1. These numbers might be 
-reasonable for the log of the exponsion energy of a supernova, 
+Consider $x$ = 51.125 with $\sigma_x$ = 0.1. These numbers might be
+reasonable for the log of the exponsion energy of a supernova,
 for example.
 
-The Taylor expansion procedure follow as 
+The Taylor expansion procedure follow as
 
 $$ \sigma_z^2 = \sigma_x^2 (\partial_x z)^2 = \sigma_x^2(ln(10)10^x)^2.$$
 
@@ -316,27 +316,27 @@ def main() -> int:
     print(f"M = {mean} + {hi} - {lo}")
     return os.EX_OK
 ```
-This time the Taylor expansion procedure give $z$ = 1.33352x10$^{51}$ $\pm$ 
+This time the Taylor expansion procedure give $z$ = 1.33352x10$^{51}$ $\pm$
 3.0705x10$^{50}$. The Monte Carlo process, on the other hand, gives
-$z$ = 1.33345x10$^{51}$ + 3.43x10$^{50}$ - 2.72x10$^{50}$. Notice the asymmetric 
-uncertainties! Exponentiating a normal distribution does not produce 
+$z$ = 1.33345x10$^{51}$ + 3.43x10$^{50}$ - 2.72x10$^{50}$. Notice the asymmetric
+uncertainties! Exponentiating a normal distribution does not produce
 a normal distribution, producing instead a distribution with a long tail.
 The Taylor expansion based procedure cannot capture this.
 
 ## Summary
 We have demonstrated how the traditional form of error propagation
 arises from a Taylor expansion approximation of the actual variance.
-This comes with a wealth of assumptions of the underlying distribution 
-that are rarely met. 
+This comes with a wealth of assumptions of the underlying distribution
+that are rarely met.
 
-We presented an alternative approach: the Monte Carlo procedure that works 
-via sampling from the underlying posterior distributions. This process 
-is trivial to implement in Python. 
+We presented an alternative approach: the Monte Carlo procedure that works
+via sampling from the underlying posterior distributions. This process
+is trivial to implement in Python.
 
-We showed through two simple examples the failures of the traditional 
+We showed through two simple examples the failures of the traditional
 process for error propagation. The Taylor method may under- (or over-)
-estimate the variance. Moreover, when nonlinearities are strong it fails 
-to recover the actual distribution, forcing the assumption of Gaussianity 
+estimate the variance. Moreover, when nonlinearities are strong it fails
+to recover the actual distribution, forcing the assumption of Gaussianity
 on the posterior.
 
 [emcee]: https://emcee.readthedocs.io/en/stable/tutorials/line/

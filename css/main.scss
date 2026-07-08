@@ -17,6 +17,49 @@ body.dark-mode {
   color: #ffffff;
 }
 
+body.dark-mode .term,
+body.dark-mode .content,
+body.dark-mode .post,
+body.dark-mode table,
+body.dark-mode tr {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode a,
+body.dark-mode .term a {
+  color: #ffb454;
+}
+
+body.dark-mode a:hover,
+body.dark-mode .term a:hover {
+  background-color: #ffb454;
+  color: #333333;
+}
+
+body.dark-mode .content a {
+  border-bottom-color: #ffb454;
+}
+
+body.dark-mode .ls-la,
+body.dark-mode .md blockquote,
+body.dark-mode .md code {
+  color: #b8b8b8;
+}
+
+body.dark-mode .term .ls-la.author,
+body.dark-mode .term .ls-la.date,
+body.dark-mode a.dir:after,
+body.dark-mode .prompt.path a.dir:before,
+body.dark-mode .prompt.path:after,
+body.dark-mode .prompt.host:after {
+  color: #ffffff;
+}
+
+body.dark-mode pre {
+  background-color: #242424;
+}
+
 /* Toggle Switch Styles */
 .theme-toggle {
   position: fixed;
