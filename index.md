@@ -47,52 +47,49 @@ More detail is available on my [research page](research).
 
 ## Selected Software
 
-Software is a key piece of the scientific infrastructure.
-The projects below are a sample of research software efforts I have developed
-or contributed to, spanning radiation hydrodynamics, performance portability,
-adaptive mesh refinement, equations of state, and code verification. Also see
-my [GitHub](https://github.com/astrobarker).
+These projects are a sample of the research software I develop and contribute
+to. More of my work is available on [GitHub](https://github.com/astrobarker).
 
 + **[Athelas][athelas]: A modern transient code**
 
-  `Athelas` is an in-development radiation hydrodynamics code for simulating
-  core-collapse supernovae and creating synthetic light curves. It is built upon
-  conservative, high-order discontinuous Galerkin methods. It supports stellar
-  profiles from the MESA stellar evolution code and is nearing production
-  capability.
+  `Athelas` is a radiation hydrodynamics code for modeling core-collapse
+  supernovae and generating synthetic light curves. It combines conservative,
+  high-order discontinuous Galerkin methods with support for mapping MESA
+  stellar profiles.
 
-+ **[Phoebus][phoebus]: Performance Portable GRRMHD**
++ **[Phoebus][phoebus]: Performance-portable GRRMHD**
 
-  `Phoebus` is a general relativistic neutrino radiation magnetohydrodynamics code built on the adaptive mesh refinement library `Parthenon`.
-  It supports a general equation of state, several radiation transport algorithms, and analytic and prescribed metrics.
-  See the [paper][phoebus-paper]!
+  `Phoebus` is a general relativistic neutrino radiation magnetohydrodynamics
+  code built on `Parthenon`. It supports multiple radiation treatments, general
+  equations of state, and analytic or prescribed metrics. See the
+  [paper][phoebus-paper].
 
-+ **[Parthenon][parthenon]: Performance Portable Block-Based Adaptive Mesh Refinement**
++ **[Parthenon][parthenon]: Performance-portable adaptive mesh refinement**
 
-  `Parthenon` is a block-structured adaptive mesh refinement library. It is built on [Kokkos], the hardware-agnostic library for on-node parallelism,
-  to provide performance-portable, distributed, adaptive mesh refinement for downstream applications.
+  `Parthenon` is a distributed, block-structured adaptive mesh refinement
+  framework built on [Kokkos] for performance portability across CPUs and GPUs.
 
-+ **[Singularity-eos][singularity-eos]: A Performance Portable Equation of State Library**
++ **[Singularity-eos][singularity-eos]: Performance-portable equations of state**
 
-  `Singularity-eos` is a performance-portable equation of state library. It leverages on-node parallelism on heterogeneous architectures.
-  At present, Singularity-eos supports over ten equations of state for both terrestrial and astrophysical applications.
-  See the [paper][singularity-eos-paper]!
+  `Singularity-eos` provides more than ten equations of state for terrestrial
+  and astrophysical applications on heterogeneous architectures. See the
+  [paper][singularity-eos-paper].
 
-+ **[thornado][thornado]: Discontinuous Galerkin Methods for Supernovae**
++ **[thornado][thornado]: Discontinuous Galerkin supernova modeling**
 
-  `Thornado` is a neutrino radiation hydrodynamics code built on high-order discontinuous Galerkin methods.
-  It leverages the adaptive mesh refinement library [AMReX](https://amrex-codes.github.io/amrex/) and supports a general equation of state.
+  `Thornado` is a neutrino radiation hydrodynamics code using high-order
+  discontinuous Galerkin methods, [AMReX](https://amrex-codes.github.io/amrex/)
+  adaptive mesh refinement, and general equations of state.
 
-+ **[sordine][sordine]: A Hydro Code Verification Suite**
++ **[sordine][sordine]: Hydrodynamics verification**
 
-  `sordine` is a (rad-)hydro code verification suite that I am expanding as needed. It includes, specifically,
-  self-similar solutions for Sedov-Taylor blast waves of all families.
+  `sordine` is a growing radiation hydrodynamics verification suite containing
+  self-similar solutions for every family of Sedov-Taylor blast waves.
 
-+ **[mplcolors][mplcolors]: A Command Line and Python Package Tool for Color Exploration**
++ **[mplcolors][mplcolors]: Command-line color tools**
 
-  `mplcolors` is a command line and Python 3.x package tool for color exploration.
-  It supports displaying matplotlib colors and colorbars, as well as color complements, triads, and tetrads, in the command line.
-  The same utilities are available as an importable package.
+  `mplcolors` is a command-line and Python package for exploring Matplotlib
+  colors, colorbars, complements, triads, and tetrads.
 
 [athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
