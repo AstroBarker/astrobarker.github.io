@@ -24,6 +24,12 @@ I am passionate about developing open source, community driven scientific softwa
 I strongly believe that open source software makes for better code and, ultimately, better science.
 When possible, all of my code and data products will be made openly available.
 
+At Los Alamos, my current work focuses on novel multiphysics algorithms for
+applications ranging from high-energy astrophysics to terrestrial experimental
+design. Broadly, I am interested in numerical methods, multiscale physics, and
+the development of scientific software that is accurate, portable, and usable by
+the broader community.
+
 During my PhD at Michigan State University as a NSF Graduate Research Fellow I worked with [Sean Couch][couch]
 as part of the SNAPhU research group studying core-collapse supernovae (CCSNe). I produced among the
 first light curves of CCSNe from high-fidelity, neutrino-driven simulations and connected observable
@@ -46,6 +52,9 @@ As an undergrad I worked with several elementary schools in the Knoxville area l
 and assisting with various after school science programs. I also frequently engaged the general
 public with science demonstrations. To recognize my outreach efforts, academic success, and research achievements,
 I was awarded a Ford Foundation Predoctoral Fellowship Honorable Mention.
+
+Outside of work, I enjoy backpacking, kayaking, nature photography, cooking,
+perfecting my coffee brew, and writing less useful software.
 
 [athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
