@@ -22,7 +22,8 @@
           ? savedTheme
           : systemTheme;
 
-        document.documentElement.dataset.theme = theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.toggle('dark-mode', theme === 'dark');
       }());
     </script>
 
@@ -63,7 +64,7 @@
     %}
     <!-- end subtemplate -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      (function () {
         const themeToggle = document.getElementById('theme-toggle');
         if (!themeToggle) return;
 
@@ -71,7 +72,7 @@
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
         const updateToggle = () => {
-          const darkMode = root.dataset.theme === 'dark';
+          const darkMode = root.getAttribute('data-theme') === 'dark';
           themeToggle.textContent = `[theme: ${darkMode ? 'dark' : 'light'}]`;
           themeToggle.setAttribute('aria-pressed', darkMode.toString());
           themeToggle.setAttribute(
@@ -88,21 +89,27 @@
           }
         };
 
-        themeToggle.addEventListener('click', () => {
-          const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-          root.dataset.theme = theme;
-          try {
-            localStorage.setItem('theme', theme);
-          } catch (error) {
-            // The selected theme still applies for the current page view.
+        const applyTheme = (theme, persist) => {
+          root.setAttribute('data-theme', theme);
+          root.classList.toggle('dark-mode', theme === 'dark');
+          if (persist) {
+            try {
+              localStorage.setItem('theme', theme);
+            } catch (error) {
+              // The selected theme still applies for the current page view.
+            }
           }
           updateToggle();
+        };
+
+        themeToggle.addEventListener('click', () => {
+          const theme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          applyTheme(theme, true);
         });
 
         const followSystemTheme = (event) => {
           if (storedTheme() !== 'dark' && storedTheme() !== 'light') {
-            root.dataset.theme = event.matches ? 'dark' : 'light';
-            updateToggle();
+            applyTheme(event.matches ? 'dark' : 'light', false);
           }
         };
 
@@ -112,8 +119,8 @@
           systemTheme.addListener(followSystemTheme);
         }
 
-        updateToggle();
-      });
+        applyTheme(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light', false);
+      }());
     </script>
 
   </body>

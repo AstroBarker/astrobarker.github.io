@@ -19,7 +19,8 @@
   --focus-color: #{$file-color};
 }
 
-html[data-theme="dark"] {
+html[data-theme="dark"],
+html.dark-mode {
   color-scheme: dark;
   --background-color: #{$dark-background};
   --body-text-color: #{$dark-body-text-color};
