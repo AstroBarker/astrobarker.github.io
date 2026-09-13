@@ -6,6 +6,26 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 
+    <script>
+      (function () {
+        let savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem('theme');
+        } catch (error) {
+          // Use the system preference when storage is unavailable.
+        }
+
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+        const theme = savedTheme === 'dark' || savedTheme === 'light'
+          ? savedTheme
+          : systemTheme;
+
+        document.documentElement.dataset.theme = theme;
+      }());
+    </script>
+
     <!-- syntax highlighting CSS -->
     <link rel="stylesheet" href="/css/syntax.css">
 
@@ -29,10 +49,9 @@
             async src="//gc.zgo.at/count.js"></script>
   </head>
   <body class="site md">
-    <!-- Toggle Switch for Dark Mode -->
-    <div class="theme-toggle">
-      <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode" />
-      <label for="theme-toggle">🌙/☀️</label>
+    <div class="theme-control">
+      <button class="theme-toggle" id="theme-toggle" type="button"
+              aria-label="Toggle color theme" aria-pressed="false">[theme: system]</button>
     </div>
 
     <!-- begin subtemplate -->
@@ -44,28 +63,56 @@
     %}
     <!-- end subtemplate -->
     <script>
-      // Check for saved theme preference in localStorage
       document.addEventListener('DOMContentLoaded', () => {
         const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
         if (!themeToggle) return;
 
-        // Check localStorage for theme preference
-        if (localStorage.getItem('theme') === 'dark') {
-          body.classList.add('dark-mode');
-          themeToggle.checked = true;
+        const root = document.documentElement;
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const updateToggle = () => {
+          const darkMode = root.dataset.theme === 'dark';
+          themeToggle.textContent = `[theme: ${darkMode ? 'dark' : 'light'}]`;
+          themeToggle.setAttribute('aria-pressed', darkMode.toString());
+          themeToggle.setAttribute(
+            'aria-label',
+            `Switch to ${darkMode ? 'light' : 'dark'} theme`
+          );
+        };
+
+        const storedTheme = () => {
+          try {
+            return localStorage.getItem('theme');
+          } catch (error) {
+            return null;
+          }
+        };
+
+        themeToggle.addEventListener('click', () => {
+          const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = theme;
+          try {
+            localStorage.setItem('theme', theme);
+          } catch (error) {
+            // The selected theme still applies for the current page view.
+          }
+          updateToggle();
+        });
+
+        const followSystemTheme = (event) => {
+          if (storedTheme() !== 'dark' && storedTheme() !== 'light') {
+            root.dataset.theme = event.matches ? 'dark' : 'light';
+            updateToggle();
+          }
+        };
+
+        if (systemTheme.addEventListener) {
+          systemTheme.addEventListener('change', followSystemTheme);
+        } else {
+          systemTheme.addListener(followSystemTheme);
         }
 
-        // Toggle theme on checkbox change
-        themeToggle.addEventListener('change', () => {
-          if (themeToggle.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-          }
-        });
+        updateToggle();
       });
     </script>
 

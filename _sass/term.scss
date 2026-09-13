@@ -1,7 +1,7 @@
 @import "fonts.scss";
 
 .term {
-    color: black;
+    color: var(--body-text-color);
     font-family: $font-family-code;
 
     table {
@@ -10,7 +10,7 @@
         table-layout: fixed;
         padding: 0;
         margin: 0;
-        background: $background;
+        background: var(--background-color);
     }
 
     td {
@@ -43,16 +43,16 @@
     }
 
     .ls-la {
-        color: $gray;
+        color: var(--muted-color);
 
         &.author, &.date {
-            color: $body-text-color;
+            color: var(--body-text-color);
         }
     }
 
     tr {
         border: none;
-        background: $background;
+        background: var(--background-color);
     }
 
 
@@ -72,7 +72,7 @@
     }
 
     a {
-        color: $body-text-color;
+        color: var(--body-text-color);
     }
 }
 
@@ -98,54 +98,54 @@ a {
 
     // fake "directories" - printed with a slash after
     &.dir {
-        color: $dir-color;
+        color: var(--dir-color);
         border-bottom: none;
 
         &:after {
             content: "/";
-            color: $body-text-color;
+            color: var(--body-text-color);
             border-bottom: none;
 
         }
 
         &:hover {
-            background-color: $dir-color;
-            color: $background;
+            background-color: var(--dir-color);
+            color: var(--background-color);
 
             &::after {
                 border-bottom: none;
-                color: $background;
+                color: var(--background-color);
             }
         }
     }
 
     // fake "files"
     &.file {
-        color: $file-color;
+        color: var(--file-color);
         &:hover {
-            background-color: $file-color;
-            color: $background;
+            background-color: var(--file-color);
+            color: var(--background-color);
         }
     }
 
     // fake "symlinks"
     &.symlink {
-        color: $symlink-color;
+        color: var(--symlink-color);
 
         @media only screen and (min-width: $breakpoint-wide) {
             &:after {
                 content: " -> " attr(href);
-                color: $gray;
+                color: var(--muted-color);
                 overflow: hidden;
             }
         }
 
         &:hover {
-            background-color: $symlink-color;
-            color: $background;
+            background-color: var(--symlink-color);
+            color: var(--background-color);
 
             &::after {
-                color: $background;
+                color: var(--background-color);
             }
         }
     }
@@ -160,23 +160,23 @@ a {
 .prompt {
     &.host {
         &:after {
-            color: $gray;
+            color: var(--muted-color);
             content: " :: ";
         }
     }
 
     &.path {
         &:after {
-            color: $gray;
+            color: var(--muted-color);
             content: " $ ";
         }
         a {
-            color: $dir-color;
+            color: var(--dir-color);
             border-bottom: none;
 
             &.dir:before {
                 content: "/";
-                color: $body-text-color;
+                color: var(--body-text-color);
                 border-bottom: none;
             }
             &.dir:after {
@@ -185,13 +185,13 @@ a {
             }
 
             &:hover {
-                background-color: $dir-color;
-                color: $background;
+                background-color: var(--dir-color);
+                color: var(--background-color);
 
                 &.dir::before {
                     border-bottom: none;
-                    color: $body-text-color;
-                    background-color: $background;
+                    color: var(--body-text-color);
+                    background-color: var(--background-color);
                 }
             }
         }
@@ -203,7 +203,7 @@ a {
 }
 
 .blinking-cursor {
-    color: black;
+    color: var(--body-text-color);
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;
     -ms-animation: 1s blink step-end infinite;
@@ -219,7 +219,7 @@ a {
     }
 
     50% {
-        color: black;
+        color: var(--body-text-color);
     }
 }
 
@@ -231,7 +231,7 @@ a {
     }
 
     50% {
-        color: black;
+        color: var(--body-text-color);
     }
 }
 
@@ -243,7 +243,7 @@ a {
     }
 
     50% {
-        color: black;
+        color: var(--body-text-color);
     }
 }
 
@@ -255,7 +255,7 @@ a {
     }
 
     50% {
-        color: black;
+        color: var(--body-text-color);
     }
 }
 
@@ -267,6 +267,12 @@ a {
     }
 
     50% {
-        color: black;
+        color: var(--body-text-color);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blinking-cursor {
+        animation: none;
     }
 }

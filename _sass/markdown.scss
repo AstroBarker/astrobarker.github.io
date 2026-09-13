@@ -58,12 +58,13 @@
 
 .md h1 {
     position: relative;
-    display: inline-block;
-    display: table-cell;
+    display: block;
     padding: $lh 0 (2 * $lh);
     margin: 0;
     overflow: hidden;
     text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .md h1:after {
@@ -79,6 +80,8 @@
 
 .md h2 {
     text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: $lh;
 }
 
 .md h2,
@@ -87,6 +90,7 @@
 .md h5,
 .md h6 {
     position: relative;
+    margin-top: (1.5 * $lh);
     margin-bottom: $lh;
 
     >a {
@@ -98,13 +102,13 @@
                 padding-right: 0.6rem;
             }
 
-            color: $gray;
+            color: var(--muted-color);
             border-bottom: none;
         }
 
         &:hover::before {
-            color: $background;
-            background-color: $link-color;
+            color: var(--background-color);
+            background-color: var(--link-color);
             border-bottom: none;
         }
     }
@@ -112,7 +116,10 @@
 
 .md h1,
 .md h2 {
-    line-height: $lh;
+    font-weight: bold;
+}
+
+.md h3 {
     font-weight: bold;
 }
 
@@ -150,7 +157,7 @@
 
 .md ul>li:before {
     content: "*";
-    color: $light-gray;
+    color: var(--faint-color);
 }
 
 .md ol {
@@ -158,7 +165,7 @@
     &>li:before {
         content: counter(ol) ".";
         counter-increment: ol;
-        color: $gray;
+        color: var(--muted-color);
     }
 }
 
@@ -167,7 +174,7 @@
     position: relative;
     padding-left: 2ch;
     overflow: hidden;
-    color: $gray;
+    color: var(--muted-color);
 }
 
 .md blockquote:after {
@@ -177,7 +184,7 @@
     top: 0;
     left: 0;
     line-height: $lh;
-    color: $light-gray;
+    color: var(--faint-color);
 }
 
 .md em {
@@ -200,17 +207,17 @@
 }
 
 .md code {
-    color: $gray;
+    color: var(--muted-color);
     // font-weight: bold;
 }
 
 .md a code {
-    color: $link-color;
+    color: var(--link-color);
 }
 
 .md a code:hover {
-    color: $background;
-    background-color: $link-color;
+    color: var(--background-color);
+    background-color: var(--link-color);
 }
 
 .md code:before,
@@ -240,7 +247,7 @@
     line-height: $lh;
     width: 100%;
     word-wrap: break-word;
-    color: $light-gray;
+    color: var(--faint-color);
 }
 
 // .md footer:before {
@@ -271,42 +278,41 @@
  * markdown-ier footnotes
  */
 
- // footnote links in body text
-$footnote-color: $file-color;
+// footnote links in body text
 .md a.footnote {
     &:before {
         content: "[^";
-        color: $footnote-color;
+        color: var(--file-color);
     }
     &:after {
         content: "]";
-        color: $footnote-color;
+        color: var(--file-color);
     }
-    color: $footnote-color;
+    color: var(--file-color);
     border-bottom: none;
 
     &:hover {
-        background-color: $footnote-color;
-        color: $background;
+        background-color: var(--file-color);
+        color: var(--background-color);
 
         &::before, &::after {
-            background-color: $footnote-color;
-            color: $background;
+            background-color: var(--file-color);
+            color: var(--background-color);
         }
     }
 }
 
 .md a.reversefootnote {
-    color: $footnote-color;
-    border-bottom: $footnote-color;
+    color: var(--file-color);
+    border-bottom: var(--file-color);
 
     &:hover {
-        background-color: $footnote-color;
-        color: $background;
+        background-color: var(--file-color);
+        color: var(--background-color);
 
         &::before, &::after {
-            background-color: $footnote-color;
-            color: $background;
+            background-color: var(--file-color);
+            color: var(--background-color);
         }
     }
 }
@@ -323,7 +329,7 @@ $footnote-color: $file-color;
         line-height: $lh;
         width: 100%;
         word-wrap: break-word;
-        color: $light-gray;
+        color: var(--faint-color);
     }
 
     ol {
@@ -331,7 +337,7 @@ $footnote-color: $file-color;
             &:before {
                 content: "[^" counter(ol) "]:";
                 counter-increment: ol;
-                color: $gray;
+                color: var(--muted-color);
             }
             padding-left: 6ch;
         }

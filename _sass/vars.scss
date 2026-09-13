@@ -6,14 +6,14 @@
  *  1. colors
  ***********************************/
 
-// international aerospace orange
-$intl-orange: #FF8200;
+// accessible terminal colors for light backgrounds
+$intl-orange: #B85A00;
 // international engineering orange
 $eng-orange: #BA160C;
 // safety yellow
 $safety-yellow: #EA6962;
 // fire engine red
-$my_blue: #007DFF;
+$my_blue: #006FD6;
 
 // ansi VGA term colors
 $cyan: cyan;
@@ -30,6 +30,15 @@ $body-text-color: black;
 $background: white;
 $gray: hsl(0, 0%, 40%);
 $light-gray: hsl(0, 0%, 75%);
+
+// dark-mode counterparts
+$dark-body-text-color: white;
+$dark-background: #333333;
+$dark-gray: #B8B8B8;
+$dark-light-gray: #8F8F8F;
+$dark-link-color: #FFB454;
+$dark-file-color: #78B7FF;
+$dark-symlink-color: #D9A0D9;
 
 // link type colors
 $link-color: $intl-orange;
@@ -59,5 +68,6 @@ $font-family: $font-family-code;
  ***********************************/
 
 $lh: 1.5rem; // vertical rhythm
+$prose-max-width: 68ch;
 $max-width: 80ch;
 $breakpoint-wide: $max-width + 12ch;
