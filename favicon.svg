@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Orange asterisk on a charcoal background">
+  <rect width="32" height="32" rx="5" fill="#242424"/>
+  <path
+    d="M16 7v18M8.2 11.5l15.6 9M23.8 11.5l-15.6 9"
+    fill="none"
+    stroke="#FFB454"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>
