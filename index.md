@@ -31,14 +31,6 @@ primary interests are numerical methods, high-order accurate algorithms,
 multiphysics modeling, and open-source scientific software for high-energy
 density physics and astrophysical transients.
 
-Start here:
-
-+ [about me](aboutme)
-+ [research](research)
-+ [resources](resources)
-+ [outreach](outreach)
-+ [cv.pdf](blb_cv.pdf)
-
 * * *
 
 ## Research
