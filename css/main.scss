@@ -285,3 +285,34 @@ header.post {
   float: left;
   color: var(--muted-color);
 }
+
+/* Compact, terminal-style contents list for long pages. */
+.page-toc {
+  margin: $lh 0 (2 * $lh);
+}
+
+.page-toc-label {
+  font-weight: bold;
+}
+
+.md .page-toc ul {
+  margin: 0;
+}
+
+.md .page-toc li {
+  padding-left: 4ch;
+  overflow-wrap: anywhere;
+}
+
+.md .page-toc li::before {
+  content: "├──";
+  color: var(--faint-color);
+}
+
+.md .page-toc li:last-child::before {
+  content: "└──";
+}
+
+.md .page-toc a {
+  border-bottom: 0;
+}

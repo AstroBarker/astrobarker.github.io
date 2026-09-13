@@ -24,6 +24,18 @@ about its life, death, and environment?
 My work involves deploying and developing computational models
 to interpret these testimonies.
 
+<nav class="page-toc" aria-label="Research topics">
+  <span class="page-toc-label">topics/</span>
+  <ul>
+    <li><a href="#open-source-simulation-codes">open-source-software</a></li>
+    <li><a href="#discontinuous-galerkin-finite-element-method">discontinuous-galerkin-methods</a></li>
+    <li><a href="#using-realistic-explosion-models-to-interpret-core-collapse-supernovae-observations">supernova-observations</a></li>
+    <li><a href="#equation-of-state-dependence-of-core-collapse-supernova-observables">equation-of-state-dependence</a></li>
+    <li><a href="#prospects-for-high-energy-follow-up-studies-of-gravitational-wave-transients">gravitational-wave-follow-up</a></li>
+    <li><a href="#other-research">other-research</a></li>
+  </ul>
+</nav>
+
 ## Open Source Simulation Codes
 
 Scientific software poses a host of unique scientific, engineering, and
