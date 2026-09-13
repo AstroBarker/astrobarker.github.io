@@ -2,6 +2,12 @@
 layout: common
 ---
 
+{% assign post_filename = page.slug | append: '.md' %}
+{% assign post_command = post_filename | prepend: 'cat ' %}
+<nav class="term post-breadcrumb" aria-label="Breadcrumb">
+  {% include term-prompt.html pwd='resources' cmd=post_command %}
+</nav>
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post">
     <h1 class="post-title"itemprop="name headline">
