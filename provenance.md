@@ -4,8 +4,7 @@ title: astrobarker.dev
 cmd: cat provenance.md
 ---
 
-Provenance
-========
+# Provenance
 
 All content on this web page is &copy; Brandon Barker and released under the
 Creative Commons license, except where stated otherwise.

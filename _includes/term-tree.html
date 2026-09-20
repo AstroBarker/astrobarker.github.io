@@ -1,0 +1,18 @@
+<!-- term-tree -->
+{% comment %}
+    A `tree`-style listing drawn inside the page (no prompt of its own, so it
+    reads as part of the file being `cat`-ed).
+    Parameters:
+    * entries (list)   - items with name, href, kind (file/dir/symlink), optional desc
+    * root    (string) - directory printed on the first line, e.g. "~" or "topics/"
+    In desc, the token %posts% is replaced with the number of posts.
+{% endcomment %}
+<div class="term term-block">
+<ul class="term-tree">
+{% if include.root %}<span class="tree-root">{{ include.root }}</span>{% endif %}
+{% for entry in include.entries %}
+  <li><a class="{{ entry.kind }}" href="{{ entry.href }}">{{ entry.name }}</a>{% if entry.desc %}<span class="desc">{{ entry.desc | replace: '%posts%', site.posts.size }}</span>{% endif %}</li>
+{% endfor %}
+</ul>
+</div>
+<!--/ term-tree -->

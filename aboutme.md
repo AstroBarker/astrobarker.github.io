@@ -4,8 +4,7 @@ title: astrobarker.dev
 cmd: cat aboutme.md
 ---
 
-About Me
-========
+# About Me
 
 > "Though my soul may set in darkness, it will rise in perfect light" - Sarah Williams
 

@@ -2,93 +2,90 @@
 layout: term
 title: astrobarker.dev
 cmd: cat research.md
+toc:
+  - { name: open-source-software, href: "#open-source-simulation-codes", kind: file }
+  - { name: discontinuous-galerkin-methods, href: "#discontinuous-galerkin-finite-element-method", kind: file }
+  - { name: supernova-observations, href: "#using-realistic-explosion-models-to-interpret-core-collapse-supernovae-observations", kind: file }
+  - { name: equation-of-state-dependence, href: "#equation-of-state-dependence-of-core-collapse-supernova-observables", kind: file }
+  - { name: gravitational-wave-follow-up, href: "#prospects-for-high-energy-follow-up-studies-of-gravitational-wave-transients", kind: file }
+  - { name: other-research, href: "#other-research", kind: file }
 ---
 
-Research
-========
+# Research
 
-> Splendors of elemental strife;
-> Smit suns that startle back the gloom;
-> New light whose tale of stellar doom
-> Fares to uncomprehending life;
+> Splendors of elemental strife \\
+> Smit suns that startle back the gloom \\
+> New light whose tale of stellar doom \\
+> Fares to uncomprehending life \\
 > -- George Sterling, The Testimony of the Suns, 1907
 
 The transient sky is diverse and ever-changing.
 Supernovae, having been observed and recorded by humanity for the
 whole of our species' history, are among the most prolific phenomena
 observed in the night sky. These are magnificent explosions following
-stellar death. They are, literally, the last testimony of a dying star.
-It is our charge as practitioners of stellar astrophysics to interpret
+stellar death. They are, in a very real sense, the last testimony of a dying
+star. It is our charge as practitioners of stellar astrophysics to interpret
 these testimonies: what is the star trying to tell us? What can we learn
 about its life, death, and environment?
 My work involves deploying and developing computational models
 to interpret these testimonies.
 
-<nav class="page-toc" aria-label="Research topics">
-  <span class="page-toc-label">topics/</span>
-  <ul>
-    <li><a href="#open-source-simulation-codes">open-source-software</a></li>
-    <li><a href="#discontinuous-galerkin-finite-element-method">discontinuous-galerkin-methods</a></li>
-    <li><a href="#using-realistic-explosion-models-to-interpret-core-collapse-supernovae-observations">supernova-observations</a></li>
-    <li><a href="#equation-of-state-dependence-of-core-collapse-supernova-observables">equation-of-state-dependence</a></li>
-    <li><a href="#prospects-for-high-energy-follow-up-studies-of-gravitational-wave-transients">gravitational-wave-follow-up</a></li>
-    <li><a href="#other-research">other-research</a></li>
-  </ul>
-</nav>
+{% include term-tree.html entries=page.toc root="topics/" %}
 
 ## Open Source Simulation Codes
 
-Scientific software poses a host of unique scientific, engineering, and
-collaborative questions. How do we create software that is robust,
-accurate, and capable of pushing the frontiers of science?
-How do we create scientific software that can survive into the future,
-answering not only the questions of today but those of tomorrow?
-Moreover, as we move into the era of exascale computing,
-we need modern simulation codes that can take full advantage
-of these architectures. This poses a significant engineering challenge as the
-number of programming models continues to grow.
-Ultimately, we seek to empower users to drive scientific innovation.
-The answer lies in **research software engineering**: the union of
-domain knowledge, numerical methods, and modern software development practices.
-I am a developer for a number of open source scientific codes working to
-answer these questions and more.
+Modern simulation codes must be robust, accurate, and able to exploit exascale
+architectures across a growing number of programming models, and they must
+outlive the questions they were written to answer. Meeting these demands is
+**research software engineering**: the union of domain knowledge, numerical
+methods, and modern software development practices. I develop and contribute
+to a number of open source codes in this spirit.
 
-**[Athelas][athelas]** is being developed to simulate the electromagnetic emission
-from transients, primarily supernovae. ``Athelas`` evolves Lagrangian hydrodynamics
-coupled to a two-moment radiation transport model.
-It leverages a discontinuous Galerkin spatial
-discretization of the fluid and radiation fields to achieve robust, high-order accurate solutions.
-Time integration is implemented with high-order, fully coupled implicit-explicit (IMEX)
-methods -- no operator splitting is required. ``Athelas`` includes Saha ionization coupled to the
-equation of state, a radioactive decay network for nickel heating, and can artificially
-drive explosions. In the near future it will incorporate a Rayleigh-Taylor mixing model.
-``Athelas`` includes a very flexible ``package`` system for building up the partial
-differential equations being solved, automatically threading physics into the IMEX
-integrator, making it very simple to add new physics. ``Athelas`` includes
-the capability to map outputs from the ``MESA`` stellar evolutionary code into
-its input format to make robust predictions.
++ **[Athelas][athelas]: A modern transient code**
 
-**[Phoebus][phoebus]** is developed to tackle a range of problems in relativistic astrophysics, with emphasis on core-collapse supernovae,
-neutron star mergers, and black hole accretion. It is developed from the ground using a GPU-first development strategy.
-To facilitate performance portability, Phoebus is built on [Kokkos][kokkos], a parallelization abstraction layer that allows
-Phoebus to run on any GPU or CPU architecture by simply changing compile-time options.
+  `Athelas` is a Lagrangian radiation hydrodynamics code for modeling
+  core-collapse supernovae and generating synthetic light curves. It combines
+  high-order discontinuous Galerkin discretizations with fully coupled
+  implicit-explicit time integration, a flexible physics `package` system, and
+  M1 transport.
 
-**[Thornado][thornado]** is a GPU-capable code utilizing a discontinuous
-Galerkin phase-space discretization developed primarily for modeling core-collapse
-supernovae. By using discontinuous Galerkin methods for both hydrodynamics and
-neutrino radiation transport, thornado can achieve high order accurate solutions for
-both the fluid and radiation fields, capturing the complex flows that assist in
-shock revival, and ensure realizability of the fermionic neutrino distribution
-functions. Thornado provides neutrino transport capabilities to the
-multiphysics code [Flash-X][flashx].
++ **[Phoebus][phoebus]: Performance-portable GRRMHD**
 
-I contribute to a number of other frameworks that support downstream
-science production codes such as the [parthenon][parthenon] adaptive
-mesh refinement framework and the [singularity-eos][singularity-eos]
-performance portable equation of state library.
+  `Phoebus` is a general relativistic neutrino radiation magnetohydrodynamics
+  code for core-collapse supernovae, neutron star mergers, and black hole
+  accretion. Built on `Parthenon` and [Kokkos][kokkos], it runs on any GPU or
+  CPU architecture. See the [paper][phoebus-paper].
 
-On my [GitHub][github] you may find software that I
-have produced, including codes for prototyping and exploring methods.
++ **[thornado][thornado]: Discontinuous Galerkin supernova modeling**
+
+  `Thornado` is a GPU-capable neutrino radiation hydrodynamics code using
+  high-order discontinuous Galerkin methods for both the fluid and the
+  radiation fields, and provides neutrino transport to [Flash-X][flashx].
+
++ **[Parthenon][parthenon]: Performance-portable adaptive mesh refinement**
+
+  `Parthenon` is a distributed, block-structured adaptive mesh refinement
+  framework built on [Kokkos][kokkos] for performance portability across CPUs
+  and GPUs.
+
++ **[Singularity-eos][singularity-eos]: Performance-portable equations of state**
+
+  `Singularity-eos` provides more than ten equations of state for terrestrial
+  and astrophysical applications on heterogeneous architectures. See the
+  [paper][singularity-eos-paper].
+
++ **[sordine][sordine]: Hydrodynamics verification**
+
+  `sordine` is a growing radiation hydrodynamics verification suite containing
+  self-similar solutions for every family of Sedov-Taylor blast waves.
+
++ **[mplcolors][mplcolors]: Command-line color tools**
+
+  `mplcolors` is a command-line and Python package for exploring Matplotlib
+  colors, colorbars, complements, triads, and tetrads.
+
+More of my work, including codes for prototyping and exploring methods, is on
+[GitHub][github].
 
 * * *
 
@@ -191,3 +188,7 @@ neutrino-driven convection and the standing accretion shock instability to shock
 [phoebus]: https://github.com/lanl/phoebus
 [thornado]: https://github.com/endeve/thornado
 [kokkos]: https://github.com/kokkos/kokkos
+[phoebus-paper]: https://ui.adsabs.harvard.edu/abs/2024arXiv241009146B/abstract
+[singularity-eos-paper]: https://doi.org/10.21105/joss.06805
+[sordine]: https://github.com/astrobarker/sistrum
+[mplcolors]: https://github.com/astrobarker/mplcolors

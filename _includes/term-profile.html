@@ -1,0 +1,21 @@
+<!-- term-profile -->
+{% comment %}
+    Renders a YAML mapping from _data/ as the front matter of the page being
+    `cat`-ed: a `---` fence, one `key: value` line per entry, another fence.
+    Parameters:
+    * file (string) - data file name, e.g. "barker.yaml" (renders site.data.barker)
+    Keys print in file order. Values are rendered as markdown, so links and
+    kramdown attributes such as `{:.dir}` work.
+{% endcomment %}
+{% assign profile_key = include.file | split: '.' | first %}
+{% assign profile_data = site.data[profile_key] %}
+<div class="term term-block term-frontmatter">
+<span class="fence">---</span>
+<dl class="term-profile">
+{% for pair in profile_data %}
+  <dt>{{ pair[0] }}</dt><dd>{{ pair[1] | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd>
+{% endfor %}
+</dl>
+<span class="fence">---</span>
+</div>
+<!--/ term-profile -->

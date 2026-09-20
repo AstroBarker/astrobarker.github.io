@@ -4,8 +4,7 @@ title: astrobarker.dev
 cmd: cat outreach.md
 ---
 
-Outreach
-========
+# Outreach
 
 > "One that beareth a torch shadoweth oneself to give light to others."
 
