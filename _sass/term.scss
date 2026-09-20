@@ -276,3 +276,92 @@ a {
         animation: none;
     }
 }
+
+// blocks drawn inside a `cat`-ed page: front matter, tree listings.
+// `.content a` in main.scss adds an underline; out-specify it here.
+.term-block {
+    margin: $lh 0;
+}
+
+// `---` lines around the fake front matter
+.term-frontmatter .fence {
+    display: block;
+    color: var(--faint-color);
+}
+
+.content .term-block a {
+    border-bottom: none;
+}
+
+// key: value lines of the fake front matter
+.md .term-profile {
+    display: grid;
+    grid-template-columns: 12ch 1fr;
+    column-gap: 1ch;
+    margin: 0;
+
+    dt {
+        color: var(--muted-color);
+
+        &::after {
+            content: ":";
+        }
+    }
+
+    dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+
+        // plain links (email); `.term a` would otherwise paint them body color
+        > a:not(.dir):not(.file):not(.symlink) {
+            color: var(--link-color);
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-wide) {
+        grid-template-columns: 1fr;
+
+        dd {
+            padding-left: 2ch;
+        }
+    }
+}
+
+// annotated `tree`-style listing
+.md .term-tree {
+    margin: 0;
+
+    .tree-root {
+        display: block;
+    }
+
+    li {
+        padding-left: 4ch;
+        overflow-wrap: anywhere;
+
+        &::before {
+            content: "\251C\2500\2500";
+            color: var(--faint-color);
+        }
+
+        &:last-child::before {
+            content: "\2514\2500\2500";
+        }
+    }
+
+    // pad names to a column so descriptions line up
+    a {
+        display: inline-block;
+        min-width: 14ch;
+    }
+
+    .desc {
+        color: var(--muted-color);
+    }
+
+    @media only screen and (max-width: $breakpoint-wide) {
+        .desc {
+            display: block;
+        }
+    }
+}
