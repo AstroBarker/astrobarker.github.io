@@ -1,12 +1,12 @@
 # Rendered on the front page by `{% include term-profile.html file="barker.yaml" %}`.
 # Keys print in order; values are markdown (links work, `{:.dir}` adds the dir class).
 name: Brandon L. Barker, PhD
-position: Metropolis Computational Physics Postdoctoral Fellow
-affiliation: Los Alamos National Laboratory
-group: Computational Physics and Methods (CAI-2); Center for Theoretical Astrophysics
+position: Research Software Engineer
+affiliation: Flatiron Institute
+group: Center for Computational Astrophysics
 education: PhD, Astronomy and Astrophysics and Computational Mathematics, Sciences, and Engineering
 interests: numerical methods, radiation hydrodynamics, multiscale and multiphysics modeling, astrophysical transients, scientific software
-email: "[barker@lanl.gov](mailto:barker@lanl.gov)"
+email: "[bbarker@flatironinstitute.org](mailto:bbarker@flatironinstitute.org)"
 elsewhere: >-
   [github](https://github.com/astrobarker){:.dir}
   [bluesky](https://bsky.app/profile/astrobarker.bsky.social){:.dir}

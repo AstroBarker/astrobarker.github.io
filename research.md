@@ -4,11 +4,7 @@ title: astrobarker.dev
 cmd: cat research.md
 toc:
   - { name: open-source-software, href: "#open-source-simulation-codes", kind: file }
-  - { name: discontinuous-galerkin-methods, href: "#discontinuous-galerkin-finite-element-method", kind: file }
-  - { name: supernova-observations, href: "#using-realistic-explosion-models-to-interpret-core-collapse-supernovae-observations", kind: file }
-  - { name: equation-of-state-dependence, href: "#equation-of-state-dependence-of-core-collapse-supernova-observables", kind: file }
-  - { name: gravitational-wave-follow-up, href: "#prospects-for-high-energy-follow-up-studies-of-gravitational-wave-transients", kind: file }
-  - { name: other-research, href: "#other-research", kind: file }
+  - { name: research-highlights,  href: "#research-highlights",          kind: file }
 ---
 
 # Research
@@ -89,94 +85,43 @@ More of my work, including codes for prototyping and exploring methods, is on
 
 * * *
 
-## Discontinuous Galerkin Finite Element Method
+## Research Highlights
 
-Discontinuous Galerkin methods are a very promising method for simulating
-astrophysical phenomena. They can be thought of as the high-order
-love child of finite volume and finite element methods.
-Similar to finite elements, the solution is represented as a basis expansion.
-However, unlike finite elements, these basis representations may be discontinuous
-across cells. Neighboring cells are connected via numerical fluxes  --
-Riemann solvers -- identical to finite volume methods.
-By evolving a high-order approximation
-of the solution on each cell instead of cell averages we avoid
-the need for complicated reconstruction steps. As a result, the
-computational stencil is independent of the order of accuracy — only
-nearest-neighbor communication is needed, making them especially parallelizable.
-Discontinuous Galerkin methods have a number of desirable qualities,
-including improved angular momentum conservation, more natural capturing
-of asymptotic limits in radiation transport, and polynomial order adaptivity
-in space. They are high resolution shock capturing schemes that are conservative
-of the cell average in the finite volume sense.
++ **Discontinuous Galerkin methods**
 
-* * *
+  High-order shock-capturing schemes that pair the basis expansions of finite
+  elements with the Riemann solvers of finite volume methods. The stencil is
+  independent of the order of accuracy, so only nearest-neighbor communication
+  is needed, and asymptotic limits in radiation transport are captured
+  naturally. They are the discretization underlying `Athelas` and `thornado`.
 
-## Using Realistic Explosion Models To Interpret Core-Collapse Supernovae Observations
++ **Realistic explosion models for Type IIP supernovae**
 
-Observations of core-collapse supernovae (CCSNe) reveal a wealth of information about the dynamics of the supernova ejecta and composition
-but tell little of the progenitor star without invoking a theoretical model. Until recently, one-dimensional (1D) theoretical
-CCSN models did not include a robust treatment of the core physics, resorting instead to artificial thermal bomb explosions.
-These simplified methods input arbitrary explosion energy into a progenitor to induce an explosion.
+  Using a 1D model of turbulence-aided, neutrino-driven explosions in place of
+  artificial thermal bombs, I produced light curves for a suite of over 100
+  progenitors that agree with observed Type IIP populations and found a strong,
+  linear relation between plateau luminosity and iron core mass. Applying
+  Bayesian inference to observed supernovae then yielded evidence for high mass
+  red supergiant progenitors.
 
-I use a new model for driving turbulence-aided neutrino-driven core-collapse supernovae in 1D, which contains a high-fidelity
-treatment of the neutrino physics while also accounting for turbulence and convection, which can reproduce properties of 3D
-simulations. Moreover, our light curve features agree very well with a population of observed Type IIP supernovae.
-With this, I can begin to connect explosion and progenitor properties for a realistic population of CCSNe to apply to observed CCSNe.
-This is especially exciting as LSST and other next-generation surveys prepare to collect unprecedented amounts of data.
++ **Equation of state dependence of supernova observables**
 
-The use of realistic explosion models is important for understanding observables and connecting back to the progenitor star.
-It is becoming clear that explosion properties inferred from light curves are not unique (e.g., Goldberg 2019) — many progenitor
-and explosion energy combinations can reproduce a light curve. Using a realistic explosion model — where the explosion energy is
-determined naturally by properties of the progenitor and neutrino physics — could help to reduce this problem by excluding
-progenitor-explosion energy combinations that cannot be achieved by more physical models.
+  A population study of 138 progenitors from 9 to 120 solar masses across nine
+  open-source nuclear equation of state tables, quantifying how core-collapse
+  observables respond to dense-matter physics and correlating them with
+  quantities such as the symmetry energy and effective nucleon mass.
 
-An initial paper has been published where we explore this method for a suite of over 100 progenitors. We find excellent
-bulk agreement with observations of other Type IIP supernovae, notable differences in estimated progenitor properties when
-trying to infer properties from observed light curves, and a strong, linear relationship between plateau luminosity and iron core mass.
++ **High-energy follow-up of gravitational wave transients**
 
-Following up on this, we used these results with real observations to infer iron core masses for a population of SNe.
-In this paper, we apply Bayesian inference methods to connect the inferred iron core mass distribution to ZAMS mass properties,
-finding evidence of high mass red supergiant progenitors.
+  Joint detection rate estimates for binary neutron star mergers and gamma-ray
+  bursts observed with Fermi, extended to a realistic follow-up strategy using
+  the GLADE galaxy catalog.
 
-* * *
++ **Supernova shock revival**
 
-
-## Equation of State Dependence of Core-Collapse Supernova Observables
-
-The outcomes of core-collapse supernova (CCSN) simulations can depend sensitively on the nuclear physics of dense matter through
-the equation of state (EOS). In the simulation of core-collapse supernovae, the EOS of nuclear matter is included through
-phenomenological models and encoded in an EOS table for use in our simulations as a relationship between the thermodynamical
-variables. Due to limitations in our understanding and in computational feasibility, there are many different models
-for the nuclear force, resulting in many different tables that we may include in our simulations. Therefore, a quantitative
-understanding of how different EOS tables affect the outcome of core collapse is crucial to our ability to make predictions.
-1D CCSN simulations are ideal tools for understanding this sensitivity, as we can run thousands of 1D simulations to explore
-the parameter space meaningfully. Using a new model for creating physical explosions in 1D, I explored the sensitivity of
-CCSNe to variations in input nuclear physics by performing a population study using nine open-source EOS tables and 138
-progenitor stars with ZAMS masses ranging from 9 to 120 solar masses. I tested the sensitivities of the observable signals
-to the nuclear equation of state and explored correlations of the signals with fundamental nuclear physics quantities,
-such as the symmetry energy and effective nucleon mass.
-
-* * *
-
-## Prospects for High Energy Follow-up Studies of Gravitational Wave Transients
-
-Many of the most violent and energetic events in the cosmos, in particular the merger of compact objects and
-core-collapse supernovae, are sources of gravitational waves and are also believed to be connected with
-Gamma Ray Bursts. Joint observations of electromagnetic and gravitational wave signals will provide an ideal
-opportunity to study the physics of these transient events and their progenitors. In particular, gamma-ray
-observatories such as Fermi, coupled with precise sky localization, will be crucial to observe the high-energy
-electromagnetic counterparts to gravitational wave signals. We constructed joint binary neutron star and gamma-ray
-burst detection rate estimates using an analysis pipeline and report on the results of this analysis. Moreover,
-I extended the analysis to include a catalog of real galaxies appropriate for such a follow-up study (the GLADE Catalog).
-
-* * *
-
-## Other Research
-
-- **The Nature of Supernova Shock Revival:** After the onset of core collapse, the shock responsible for tearing the
-star apart and driving the explosion runs out of energy and stalls. The exact nature of how the shock is revived is
-still a matter of active research. I developed data analysis tools to investigate the relative contributions of
-neutrino-driven convection and the standing accretion shock instability to shock revival.
+  Analysis tools to separate the contributions of neutrino-driven convection
+  and the standing accretion shock instability to reviving the stalled
+  supernova shock.
 
 * * *
 

@@ -22,15 +22,20 @@ tree:
 
 Welcome to the home page of Brandon L. Barker, PhD -- the best stop on the information superhighway!
 
-I am a computational astrophysicist and research software engineer at Los Alamos
-National Laboratory in the Computational Physics and Methods group.
+I am a research software engineer at the Flatiron Institute
+[Center for Computational Astrophysics][cca].
+
 I develop and deploy modern, high performance multiphysics scientific 
 simulation software to model high energy density plasmas for both 
 terrestrial and astrophysical environments. My interests include 
 astrophysical transients (primarily supernovae!), nuceosynthesis sites, 
 high order numerical methods, radiation hydrodynamics, and multiphysics 
 coupling.
+Previously I was a Metropolis Computational Physics Postdoctoral Fellow at
+Los Alamos National Laboratory in the Comutational Physics and Methods group.
 
 Find out more about me and my work:
 
 {% include term-tree.html entries=page.tree root="~" %}
+
+[cca]: https://simonsfoundation.org/flatiron/center-for-computational-astrophysics

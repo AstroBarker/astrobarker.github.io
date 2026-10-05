@@ -10,53 +10,45 @@ cmd: cat aboutme.md
 
 * * *
 
-I am a Metropolis computational physics postdoctoral fellow at Los Alamos National Laboratory
-in the Computational Physics and Methods group.
+I am a research software engineer at the Flatiron Institute Center for
+Computational Astrophysics.
 
-My primary research interests are the explosion mechanisms of core-collapse supernovae,
-understanding which stars explode as CCSNe, the origins of the heaviest elements, and
-the development of portable, scalable, open source scientific software. I am the lead developer of
-[athelas][athelas], a new high-order code in development for modeling supernova light curves and
-[phoebus][phoebus], a general relativistic radiation magnetohydrodynamic code for relativistic astrophysics.
+I work on novel multiphysics algorithms for applications ranging from high-energy
+astrophysics to terrestrial experimental design. Broadly, I am interested in
+numerical methods, multiscale physics, and the development of scientific
+software that is accurate, portable, and usable by the broader community.
 
-I am passionate about developing open source, community driven scientific software.
-I strongly believe that open source software makes for better code and, ultimately, better science.
-When possible, all of my code and data products will be made openly available.
+My primary research interests are the explosion mechanisms of core-collapse
+supernovae, understanding which stars explode, the origins of the heaviest
+elements, and the development of portable, scalable, open source scientific
+software. I am the lead developer of [athelas][athelas], a new high-order code
+for modeling supernova light curves, and [phoebus][phoebus], a general
+relativistic radiation magnetohydrodynamic code for relativistic astrophysics.
+I strongly believe that open source software makes for better code and,
+ultimately, better science, and I make my code and data products openly
+available whenever possible.
 
-At Los Alamos, my current work focuses on novel multiphysics algorithms for
-applications ranging from high-energy astrophysics to terrestrial experimental
-design. Broadly, I am interested in numerical methods, multiscale physics, and
-the development of scientific software that is accurate, portable, and usable by
-the broader community.
+Previously I was a Metropolis Computational Physics Postdoctoral Fellow at
+Los Alamos National Laboratory in the Computational Physics and Methods group.
 
-During my PhD at Michigan State University as a NSF Graduate Research Fellow I worked with [Sean Couch][couch]
-as part of the SNAPhU research group studying core-collapse supernovae (CCSNe). I produced among the
-first light curves of CCSNe from high-fidelity, neutrino-driven simulations and connected observable
-properties of type IIP supernovae to properties of the progenitor. I previously also collaborated with
-Eirik Endeve, Anthony Mezzacappa, and others developing the [thornado][thornado]
-supernova [radiation hydrodynamics code](https://ui.adsabs.harvard.edu/abs/2021ApJS..253...21P/abstract).
+I earned my PhD at Michigan State University as an NSF Graduate Research
+Fellow, working with [Sean Couch][couch] in the SNAPhU research group. I
+produced among the first light curves of core-collapse supernovae from
+high-fidelity, neutrino-driven simulations and connected observable properties
+of Type IIP supernovae to properties of the progenitor. Before that, I studied
+physics and mathematics at the University of Tennessee, Knoxville, where I
+worked with Eirik Endeve and Anthony Mezzacappa on the [thornado][thornado]
+supernova [radiation hydrodynamics code][thornado-paper], the subject of my
+[senior thesis][undthesis].
 
-I graduated with honors from the University of Tennessee, Knoxville (UTK) in 2019 with double majors in
-physics and mathematics and a minor in astronomy. That same year I was named Chancellor’s Undergraduate
-Researcher of the Year for my exceptional academic record and research contributions.
-My research contributions were further recognized by the National Science
-Foundation through a NSF Graduate Research Fellowship.
-
-At UTK I worked with Eirik Endeve and Anthony Mezzacappa exploring the explosion mechanism of core-collapse
-supernovae and developing thornado radiation hydrodynamics code,
-on which my [senior thesis](https://trace.tennessee.edu/utk_chanhonoproj/2292/) was based.
-
-Outside of research, I’m passionate about equitable STEM education and science outreach.
-As an undergrad I worked with several elementary schools in the Knoxville area leading, organizing,
-and assisting with various after school science programs. I also frequently engaged the general
-public with science demonstrations. To recognize my outreach efforts, academic success, and research achievements,
-I was awarded a Ford Foundation Predoctoral Fellowship Honorable Mention.
-
-Outside of work, I enjoy backpacking, kayaking, nature photography, cooking,
-perfecting my coffee brew, and writing less useful software.
+Outside of research, I care about equitable STEM education and science
+outreach; see my [outreach](outreach) page. Outside of work, I enjoy
+backpacking, kayaking, nature photography, cooking, perfecting my coffee brew,
+and writing less useful software.
 
 [athelas]: https://github.com/athelas-astro/athelas
 [phoebus]: https://github.com/lanl/phoebus
 [thornado]: https://github.com/endeve/thornado
+[thornado-paper]: https://ui.adsabs.harvard.edu/abs/2021ApJS..253...21P/abstract
 [couch]: https://web.pa.msu.edu/people/couch/
 [undthesis]: https://trace.tennessee.edu/utk_chanhonoproj/2292/
